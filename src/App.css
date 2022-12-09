@@ -1,3 +1,4 @@
+/* App Default css styling */
 .App {
   text-align: center;
 }
@@ -35,4 +36,20 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* CSS Color Root */
+:root {
+  /* Light mode  */
+-lit-high: #c4fff9;
+-med-high: #9ceaef;
+-med-acc: #3dccc7;
+-dark-acc: #07beb8;
+-tur-back: #68d8d6;
+/* Dark mode */
+-lit-acc: #00a6fb;
+-med-acc: #0582ca;
+-med-high: #006494;
+-dark-high: #003554;
+-roy-back: #051923;
 }
