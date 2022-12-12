@@ -14,6 +14,18 @@ const userSchema = new Schema(
             unique: true,
             match: [/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/, "Please use a valid email."],        // validates email
         },
+        firstName: {
+            type: String,
+            unique: true,
+            required: true,
+            trim: true,
+        },
+        lastName: {
+            type: String,
+            unique: true,
+            required: true,
+            trim: true,
+        },
         questions: [{
             type: Schema.Types.ObjectId,
             ref: "question"
@@ -25,7 +37,8 @@ const userSchema = new Schema(
         karma: {
             type: Number,
             min: 0,
-        }
+        },
+        
     },
     {                               // as shown in assignment 26
         toJSON: {
