@@ -1,3 +1,38 @@
 [
-    {}
+    {
+        "username": "testname",
+        "email": "testemail@email.com",
+        "firstname": "Test",
+        "lastname": "Testington",
+        "questions": [],
+        "answers": [],
+        "karma": 20
+    },
+    {
+        "username": "Freeman",
+        "email": "gordan@blackmesa.com",
+        "firstname": "Gordan",
+        "lastname": "Freeman",
+        "questions": [],
+        "answers": [],
+        "karma": 5
+    },
+    {
+        "username": "theBestTest",
+        "email": "thisIsaTest@mail.co",
+        "firstname": "Null",
+        "lastname": "Null",
+        "questions": [],
+        "answers": [],
+        "karma": 15
+    },
+    {
+        "username": "XxRawrXDxX",
+        "email": "scenekid@emo.com",
+        "firstname": "RawrXD",
+        "lastname": "Scene",
+        "questions": [],
+        "answers": [],
+        "karma": 25
+    }
 ]
