@@ -1,4 +1,4 @@
-const { Question } = require('../models'); // gets the needed model for this controller
+const { Question, Answer } = require('../models'); // gets the needed model for this controller
 
 module.exports = {
     // functions for each route
@@ -35,10 +35,10 @@ module.exports = {
     deleteQuestion(req, res) {
         Question.findOneAndDelete({ _id: req.params.questionId })
         .then((question) => 
-        !question ? res.status(404).json({ message: 'Question not found'}) : Question.deleteMany({ _id: { $in: thoughts.reactions }}))
-        .then(res.status(200).json({ message: "Empty head syndrome. Thoughts destroyed."}))
+        !question ? res.status(404).json({ message: 'Question not found'}) : Question.deleteMany({ _id: { $in: question.answers }}))
+        .then(res.status(200).json({ message: "This question is no more."}))
         .catch((err) => res.status(500).json(err));
     },
 
-    
+
 }
