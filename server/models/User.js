@@ -26,7 +26,13 @@ const userSchema = new Schema(
             type: Number,
             min: 0,
         }
-    }
+    },
+    {                               // as shown in assignment 26
+        toJSON: {
+            getters: true,
+        },
+        id: false,
+    },
 )
 
 
