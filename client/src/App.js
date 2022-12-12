@@ -7,6 +7,7 @@ import Search from './components/Search';
 import Notification from './components/Notification';
 import Favorites from './components/Favorites';
 import Profile from './components/Profile';
+import Saves from './components/Saves'
 
 function App() {
   return (
@@ -25,6 +26,8 @@ const renderPage = () => {
       return <Favorites />
       case "Profile":
         return <Profile />
+      case "Saves":
+        return <Saves />
     default: return <Home />;
   }
 };
