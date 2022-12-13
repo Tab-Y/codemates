@@ -4,7 +4,7 @@ const dateFormat = require('../utils/dateFormat');
 
 const questionSchema = new Schema(
     {
-        content: {
+        questionContent: {
             type: String,
             required: true,
             minlength: 5,
