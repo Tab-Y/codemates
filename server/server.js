@@ -29,8 +29,17 @@ if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../client/build')));
 }
 
-require('./controllers/index')(app);
+const routes = require('./controllers')
 
+app.use(routes)
 
-  app.listen(PORT, () => console.log(`App listening on port ${PORT}!`));
+// require('./controllers/index')(app);
+
+// sync is currently breaking server starting
+
+// sequelize.sync({ force: false }).then(() => {
+  app.listen(PORT, () => 
+    console.log(`App listening on port ${PORT}!`)
+  )
+// })
 
