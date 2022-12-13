@@ -41,15 +41,75 @@
 /* CSS Color Root */
 :root {
   /* Light mode  */
--lit-high: #c4fff9;
--med-high: #9ceaef;
--med-acc: #3dccc7;
--dark-acc: #07beb8;
--tur-back: #68d8d6;
+--lit-high: #c4fff9;
+--med-high: #9ceaef;
+--med-acc: #3dccc7;
+--dark-acc: #07beb8;
+--tur-back: #68d8d6;
 /* Dark mode */
--lit-acc: #00a6fb;
--med-acc: #0582ca;
--med-high: #006494;
--dark-high: #003554;
--roy-back: #051923;
+--lit-acc: #00a6fb;
+--med-acc: #0582ca;
+--med-high: #006494;
+--dark-high: #003554;
+--roy-back: #051923;
 }
+/* --------------Landing Page CSS--------------------- */
+/* Split the screen in half */
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Control the left side */
+.left {
+  left: 0;
+  background-color: var(--roy-back);
+}
+
+/* Control the right side */
+.right {
+  right: 0;
+  background-color: var(--lit-high);
+  color: var(--roy-back);
+  font-size: 17px;
+}
+
+/* If you want the content centered horizontally and vertically */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Style the image inside the centered container, if needed */
+.centered img {
+  width: 400px;
+  height: 500px;
+  border-radius: 50%;
+}
+
+button {
+  border-radius: 10px;
+  background-color: #006494;
+  color: var(--lit-high);
+  padding: 0px 40px;
+}
+
+div button {
+  margin: 10px;
+}
+
+@media (max-width: 576px) {
+  #welcomePara {
+    width: 85%;
+    font-size: 10px;
+   }
+}
+/* ----------------End of Landing CSS-------------- */
