@@ -16,5 +16,7 @@ const PostedProblems = () => {
                 </ul>
             </section>
         </div>
-    )
-}
+    );
+};
+
+export default PostedProblems;
