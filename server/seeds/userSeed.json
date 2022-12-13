@@ -1,38 +1,42 @@
 [
     {
         "username": "testname",
+        "password": "password1234",
         "email": "testemail@email.com",
-        "firstname": "Test",
-        "lastname": "Testington",
-        "questions": [],
-        "answers": [],
+        "firstName": "Test",
+        "lastName": "Testington",
+        "questionsId": [],
+        "answersId": [],
         "karma": 20
     },
     {
         "username": "Freeman",
+        "password": "password1234",
         "email": "gordan@blackmesa.com",
-        "firstname": "Gordan",
-        "lastname": "Freeman",
-        "questions": [],
-        "answers": [],
+        "firstName": "Gordan",
+        "lastName": "Freeman",
+        "questionsId": [],
+        "answersId": [],
         "karma": 5
     },
     {
         "username": "theBestTest",
+        "password": "password1234",
         "email": "thisIsaTest@mail.co",
-        "firstname": "Null",
-        "lastname": "Null",
-        "questions": [],
-        "answers": [],
+        "firstName": "Null",
+        "lastName": "Null",
+        "questionsId": [],
+        "answersId": [],
         "karma": 15
     },
     {
         "username": "XxRawrXDxX",
+        "password": "password1234",
         "email": "scenekid@emo.com",
-        "firstname": "RawrXD",
-        "lastname": "Scene",
-        "questions": [],
-        "answers": [],
+        "firstName": "RawrXD",
+        "lastName": "Scene",
+        "questionsId": [],
+        "answersId": [],
         "karma": 25
     }
 ]

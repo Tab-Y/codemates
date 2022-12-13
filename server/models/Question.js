@@ -1,40 +1,42 @@
-const { Schema, model } = require('mongoose');
-const { answerSchema } = require('./Answer');
-const dateFormat = require('../utils/dateFormat');
+const { Model, DataTypes } = require('sequelize');
+const bcrypt = require('bcrypt');
+const sequelize = require('../config/connection');
 
-const questionSchema = new Schema(
+class Question extends Model {}
+
+Question.init(
     {
+        id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            primaryKey: true,
+            autoIncrement: true,
+        },
         questionContent: {
-            type: String,
-            required: true,
-            minlength: 5,
-            maxlength: 280,
+            type: DataTypes.STRING,
+            allowNull: false,
         },
-        createdAt: {
-            type: Date,
-            default: Date.now,
-            get: (timestamp) => dateFormat(timestamp),
+        dateCreated: {
+            type: DataTypes.DATE,
+            allowNull: false,
+            defaultValue: DataTypes.NOW,
         },
-        username: {
-            type: String,
-            required: true,
+        userId: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'users',
+                key: 'id',
+            },
         },
-        answers: {
-            type: [answerSchema],
-        },
+
     },
-    {                               // as shown in assignment 26
-        toJSON: {
-            virtuals: true,
-        },
-        id: false,
-    },
+    {
+        sequelize,
+        timestamps: false,
+        freezeTableName: true,
+        underscored: true,
+        modelName: 'questions', 
+    }
 )
-
-questionSchema.virtual('answerCount').get( () => {
-    return this.answers.length;
-});
-
-const Question = model('question', questionSchema)
 
 module.exports = Question;

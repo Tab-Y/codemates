@@ -1,18 +1,18 @@
-const db = require('../config/connection');
+const sequelize = require('../config/connection');
 const { Answer, Question, User } = require('../models');
 const userSeeds = require('./userSeed.json');
+const questionsSeeds = require('./questionSeed.json');
+const answerSeeds = require('./answerSeeds.json')
 
-db.once('open', async () => {
-    try {
-        // await deletes
+const seedAll = async () => {
+    await sequelize.sync({ force: true });
 
-        // await create
+    await User.bulkCreate(userSeeds);
+    await Question.bulkCreate(questionsSeeds);
+    await Answer.bulkCreate(answerSeeds)
 
-        // run seed for problems
-    } catch (err) {
-        console.error(err)
-        process.exit(1)
-    }
     console.log('seeding complete');
     process.exit(0)
-})
+};
+
+seedAll();

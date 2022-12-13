@@ -1,67 +1,70 @@
-const { Schema, model } = require('mongoose');
+const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
+const sequelize = require('../config/connection');
 
-const userSchema = new Schema(
+class User extends Model {
+    checkPassword(loginPw) {
+        return bcrypt.compareSync(loginPw, this.password);
+    }
+}
+
+User.init(
     {
+        id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            primaryKey: true,
+            autoIncrement: true,
+        },
         username: {
-            type: String,
-            unique: true,
-            required: true,
-            trim: true,
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        password: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+                len: [8],
+            },
         },
         email: {
-            type: String,
-            required: true,
+            type: DataTypes.STRING,
+            allowNull: false,
             unique: true,
-            match: [/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/, "Please use a valid email."],        // validates email
+            validate: {
+                isEmail: true,
+            },
         },
         firstName: {
-            type: String,
-            unique: true,
-            required: true,
-            trim: true,
+            type: DataTypes.STRING,
+            allowNull: false,
         },
         lastName: {
-            type: String,
-            unique: true,
-            required: true,
-            trim: true,
+            type: DataTypes.STRING,
         },
-        questions: [{
-            type: Schema.Types.ObjectId,
-            ref: "question"
-        }],
-        answers: [{
-            type: Schema.Types.ObjectId,
-            ref: 'answer'
-        }],
         karma: {
-            type: Number,
-            min: 0,
-        },
-
+            type: DataTypes.INTEGER,
+        }
     },
-    {                               // as shown in assignment 26
-        toJSON: {
-            getters: true,
+    {
+        hooks: {
+            beforeCreate: async (newUserData) => {
+                newUserData.password = await bcrypt.hash(newUserData.password, 10);
+                return newUserData;
+            },
+            beforeUpdate: async (updatedUserData) => {
+                if (updatedUserData.password) {
+                updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
+                }
+                return updatedUserData;
+              },
         },
-        id: false,
-    },
-)
-
-userSchema.pre('save', async function (next) {
-    if (this.isNew || this.isModified('password')) {
-        const saltRounds = 10;
-        this.password = await bcrypt.hash(this.password, saltRounds);
+        sequelize,
+        timestamps: false,
+        freezeTableName: true,
+        underscored: true,
+        modelName: 'users',
     }
-
-    next();
-});
-
-userSchema.methods.isCorrectPassword = async function (password) {
-    return bcrypt.compare(password, this.password);
-};
-
-const User = model('user', userSchema);
+);
 
 module.exports = User;
