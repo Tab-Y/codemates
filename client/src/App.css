@@ -113,3 +113,15 @@ div button {
    }
 }
 /* ----------------End of Landing CSS-------------- */
+
+/* -----------------Login CSS---------------------- */
+.loginHeading {
+  color: var(--roy-back);
+}
+.loginInput {
+  background-color: var(--roy-back);
+}
+.form-control::placeholder {
+  color: white;
+}
+/* --------------End of Login CSS----------------- */
