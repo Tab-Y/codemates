@@ -16,5 +16,7 @@ const SolvedProblems = () => {
                 </ul>
             </section>
         </div>
-    )
-}
+    );
+};
+
+export default SolvedProblems;
