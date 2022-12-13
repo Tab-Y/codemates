@@ -5,17 +5,21 @@
     "main": "server.js",
     "scripts": {
         "start": "node server.js",
-        "watch": "nodemon server.js"
+        "watch": "nodemon server.js",
+        "seed": "node seeds/seed.js"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "dependencies": {
         "bcrypt": "^4.0.1",
+        "connect-session-sequelize": "^7.0.4",
         "dotenv": "^16.0.3",
         "express": "^4.17.1",
+        "express-session": "^1.17.3",
         "jsonwebtoken": "^8.5.1",
-        "mongoose": "^5.9.10"
+        "mysql2": "^2.2.5",
+        "sequelize": "^6.3.5"
     },
     "devDependencies": {
         "nodemon": "^2.0.3"

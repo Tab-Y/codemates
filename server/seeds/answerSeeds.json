@@ -1,0 +1,18 @@
+[
+    {
+        "answerContent": "what a nice test this is",
+        "userId": 1
+    },
+    {
+        "answerContent": "It depends if it is an African or European swallow",
+        "userId": 2
+    },
+    {
+        "answerContent": "I dont't know that!",
+        "userId": 1
+    },
+    {
+        "answerContent": "it already works",
+        "userId": 3
+    }
+]
