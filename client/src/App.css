@@ -126,6 +126,33 @@ div button {
 }
 /* --------------End of Login CSS----------------- */
 
+/* --------------------Home CSS-------------------- */
+header {
+  background-color: var(--roy-back);
+}
+main {
+  background: var(--roy-back);
+  color: var(--roy-back);
+  
+}
+.homeCards {
+  background-color: #c4fff9;
+}
+.searchInput::placeholder {
+  color: var(--roy-back);
+}
+/* -------------------------End of Home CSS------------------- */
+
+
+
+/* ---------------------About CSS--------------------------- */
+.carousel-caption {
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: initial;
+  }
+  /* ---------------------End of About CSS--------------------------- */
+  
 /* ---------------Solved Problems Page------------ */
 body {
   background-color: var(--roy-back);
@@ -217,3 +244,4 @@ h2 {
 }
 /* card still need some styling */
 /* ----------------End of the Profile Page-------------- */
+
