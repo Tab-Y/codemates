@@ -173,3 +173,47 @@ h2 {
 }
 /* list group needs styling */
 /* --------------End of Posted Problem Page-------------- */
+
+/* ---------------------Profile Page--------------------- */
+body {
+  background-color: var(--roy-back);
+}
+h1 {
+  color: var(--lit-high);
+  margin-left: 8cm;
+  margin-top: 2cm;
+}
+h2 {
+  color: var(--lit-high);
+}
+.bank-point {
+  margin-left: 2cm;
+  margin-top: 6cm;
+}
+.card-header {
+  text-align: center;
+}
+.post {
+  margin-left: 15cm;
+  margin-top: -8cm;
+}
+.solve {
+  margin-left: 15cm;
+  margin-top: 1cm;
+}
+.post-history  {
+  width: 70rem;
+  margin-left: 15cm;
+  margin-top: 1cm;
+}
+.solved-history {
+  width: 70rem;
+  margin-left: 15cm;
+  margin-top: 1cm;
+}
+.post-btn, .solve-btn {
+  margin-left: 40cm;
+  color: var(--dark-acc);
+}
+/* card still need some styling */
+/* ----------------End of the Profile Page-------------- */
