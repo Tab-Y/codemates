@@ -2,74 +2,74 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar';
-import Home from './components/Home';
-import Search from './components/Search';
-import Notification from './components/Notification';
-import Favorites from './components/Favorites';
+import Landing from './components/Landing';
+import Login from './components/Login';
+import NewAnswer from './components/NewAnswer';
+import NewProblem from './components/NewProblem';
+import PostedProblems from './components/PostedProblems';
 import Profile from './components/Profile';
-import Saves from './components/Saves'
+import SavedProblems from './components/SavedProblems';
+import Signup from './components/Signup';
+import SingleProblem from './components/SingleProblem';
+import SolvedProblems from './components/SolvedProblems';
 
 function App() {
-  return (
 
-//Set state default to Home
-const [currentPage, handlePageChange] = useState("Home");
+  //Set state default to Home
+  const [currentPage, handlePageChange] = useState("Landing");
 
-//Render page function to switch statement
-const renderPage = () => {
-  switch (currentPage) {
-    case "Search":
-      return <Search />;
-    case "Notification":
-      return <Notification />
-    case "Favorites":
-      return <Favorites />
+  //Render page function to switch statement
+  const renderPage = () => {
+    switch (currentPage) {
+      case "Login":
+        return <Login />;
+      
+      case "NewAnswer":
+        return <NewAnswer />
+      
+      case "NewProblem":
+        return <NewProblem />
+
+      case "PostedProblems":
+        return <PostedProblems />
+
       case "Profile":
         return <Profile />
-      case "Saves":
-        return <Saves />
-    default: return <Home />;
-  }
-};
 
-return (
-  <React.Fragment>
+      case "SavedProblems":
+        return <SavedProblems /> 
 
-  <div>
-      <main>
-          <Nav
-              currentPage={currentPage}
-              handlePageChange={handlePageChange}
-          />
-          <div>{renderPage(currentPage)}</div>
-      </main>
-  </div>
-  
-  <Footer></Footer>
-  </React.Fragment>
-  
+      case "Signup":
+        return <Signup />
+
+      case "SingleProblem":
+        return <SingleProblem /> 
+
+      case "SolvedProblems":
+        return <SolvedProblems />    
+        
+      default: return <Landing />;
+    }
+  };
+
+  return (
+    <React.Fragment>
+
+    <div>
+        <main>
+            <Nav
+                currentPage={currentPage}
+                handlePageChange={handlePageChange}
+            />
+            <div>{renderPage(currentPage)}</div>
+        </main>
+    </div>
+    
+    <Footer></Footer>
+    </React.Fragment>
+    
 );
 }
 
-
-
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
 
 export default App;
