@@ -5,7 +5,7 @@ const CreateAnswer = () => {
     return (
         <div>
             <section>
-                <h2>Answer</h2>
+                <h2 class="answer">Answer</h2>
             </section>
             <div class="card-group">
                 <div class="card">
@@ -16,8 +16,9 @@ const CreateAnswer = () => {
                     </div>
                 </div>
             </div>
+            <button type="button" class="btn btn-primary create-btn">Create Answer</button>
             <section>
-                <h2>Other Answers</h2>
+                <h2 class="other">Other Answers</h2>
                 <ul class="list-group">
                     <li class="list-group-item">An item</li>
                     <li class="list-group-item">A second item</li>
@@ -25,7 +26,6 @@ const CreateAnswer = () => {
                     <li class="list-group-item">A fourth item</li>
                     <li class="list-group-item">And a fifth one</li>
                 </ul>
-                <button type="button" class="btn btn-primary">Create Answer</button>
             </section>
         </div>
     );

@@ -245,3 +245,33 @@ h2 {
 /* card still need some styling */
 /* ----------------End of the Profile Page-------------- */
 
+/* ------------------Create Answer Page------------------- */
+body {
+  background-color: var(--roy-back);
+}
+h2 {
+  color: var(--lit-high);
+}
+.answer {
+margin-left: 9cm;
+margin-top: 8cm;
+}
+.answer-card {
+  width: 30rem;
+  margin-left: 9cm;
+}
+.create-btn {
+  background-color: #006494;
+  border-color: #006494;
+  margin-left: 9cm;
+  margin-top: 0.5cm
+}
+.other {
+margin-left: 28cm;
+margin-top: -6.5cm;
+}
+.other-list {
+  width: 40rem;
+  margin-left: 28cm;
+}
+/* -----------------End of Create Answer Page------------------ */
