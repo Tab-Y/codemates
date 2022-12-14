@@ -125,3 +125,20 @@ div button {
   color: white;
 }
 /* --------------End of Login CSS----------------- */
+
+/* --------------------Home CSS-------------------- */
+header {
+  background-color: var(--roy-back);
+}
+main {
+  background: var(--roy-back);
+  color: var(--roy-back);
+  
+}
+.homeCards {
+  background-color: #c4fff9;
+}
+.searchInput::placeholder {
+  color: var(--roy-back);
+}
+/* -------------------------End of Home CSS------------------- */
