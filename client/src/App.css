@@ -152,3 +152,96 @@ main {
   bottom: initial;
   }
   /* ---------------------End of About CSS--------------------------- */
+  
+/* ---------------Solved Problems Page------------ */
+body {
+  background-color: var(--roy-back);
+}
+h2 {
+  color: var(--lit-high);
+  margin-left: 8cm;
+  margin-top: 4cm;
+}
+.btn {
+  background-color: #006494;
+  color: white;
+  border-color: #006494;
+  margin-left: 38.2cm;
+  margin-top: -2cm;
+}
+.solved-list {
+  width: 75rem;
+  margin-left: 10cm;
+  margin-top: 0.1cm
+}
+/* list group needs styling */
+/* ----------------End of Solved Problem Page------------ */
+
+/* ----------------Posted Problems Page----------------- */
+body {
+  background-color: var(--roy-back);
+}
+h2 {
+  color: var(--lit-high);
+  margin-left: 8cm;
+  margin-top: 4cm;
+}
+.btn {
+  background-color: #006494;
+  color: white;
+  border-color: #006494;
+  margin-left: 38.2cm;
+  margin-top: -2cm;
+}
+.solved-list {
+  width: 75rem;
+  margin-left: 10cm;
+  margin-top: 0.1cm
+}
+/* list group needs styling */
+/* --------------End of Posted Problem Page-------------- */
+
+/* ---------------------Profile Page--------------------- */
+body {
+  background-color: var(--roy-back);
+}
+h1 {
+  color: var(--lit-high);
+  margin-left: 8cm;
+  margin-top: 2cm;
+}
+h2 {
+  color: var(--lit-high);
+}
+.bank-point {
+  margin-left: 2cm;
+  margin-top: 6cm;
+}
+.card-header {
+  text-align: center;
+}
+.post {
+  margin-left: 15cm;
+  margin-top: -8cm;
+}
+.solve {
+  margin-left: 15cm;
+  margin-top: 1cm;
+}
+.post-history  {
+  width: 70rem;
+  margin-left: 15cm;
+  margin-top: 1cm;
+}
+.solved-history {
+  width: 70rem;
+  margin-left: 15cm;
+  margin-top: 1cm;
+}
+.post-btn, .solve-btn {
+  margin-left: 40cm;
+  color: var(--dark-acc);
+}
+/* card still need some styling */
+/* ----------------End of the Profile Page-------------- */
+
