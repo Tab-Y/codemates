@@ -125,3 +125,27 @@ div button {
   color: white;
 }
 /* --------------End of Login CSS----------------- */
+
+/* ---------------Solved Problems Page------------ */
+body {
+  background-color: var(--roy-back);
+}
+h2 {
+  color: var(--lit-high);
+  margin-left: 8cm;
+  margin-top: 4cm;
+}
+.btn {
+  background-color: #006494;
+  color: white;
+  border-color: #006494;
+  margin-left: 38.2cm;
+  margin-top: -2cm;
+}
+.solved-list {
+  width: 75rem;
+  margin-left: 10cm;
+  margin-top: 0.1cm
+}
+/* list group needs styling */
+/* ----------------End of Solved Problem Page------------ */
