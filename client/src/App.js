@@ -16,47 +16,74 @@ import SolvedProblems from './components/SolvedProblems';
 function App() {
 
   //Set state default to Home
-  const [currentPage, handlePageChange] = useState("Landing");
+  const [currentPage, handlePageChange] = useState("landing");
 
-  //Render page function to switch statement
-  const renderPage = () => {
-    switch (currentPage) {
-      case "Login":
-        return <Login />;
-      
-      case "NewAnswer":
-        return <NewAnswer />
-      
-      case "NewProblem":
-        return <NewProblem />
-
-      case "PostedProblems":
-        return <PostedProblems />
-
-      case "Profile":
-        return <Profile />
-
-      case "SavedProblems":
-        return <SavedProblems /> 
-
-      case "Signup":
-        return <Signup />
-
-      case "SingleProblem":
-        return <SingleProblem /> 
-
-      case "SolvedProblems":
-        return <SolvedProblems />    
-        
-      default: return <Landing />;
-    }
-  };
+  // useState functions for button/ nav onClick()
+  // ---------------------------------------------------------------
+  // renderLanding={() => handlePageChange('landing')}
+  // renderLogin={() => handlePageChange('Login')}
+  // renderNewAnswer={() => handlePageChange('NewAnswer')}
+  // renderNewProblem={() => handlePageChange('NewProblem')}
+  // renderPostedProblems={() => handlePageChange('PostedProblems')}
+  // renderProfile={() => handlePageChange('Profile')}
+  // renderSavedProblems={() => handlePageChange('SavedProblems')}
+  // renderSignup={() => handlePageChange('Signup')}
+  // renderSingleProblem={() => handlePageChange('SingleProblem')}
+  // renderSolvedProblems={() => handlePageChange('SolvedProblems')}
+  // active={currentPage}
+  // ---------------------------------------------------------------
 
   return (
     <React.Fragment>
 
     <div>
         <main>
+
+            <Navbar
+                renderLanding={() => handlePageChange('landing')}
+                renderLogin={() => handlePageChange('Login')}
+                renderNewAnswer={() => handlePageChange('NewAnswer')}
+                renderNewProblem={() => handlePageChange('NewProblem')}
+                renderPostedProblems={() => handlePageChange('PostedProblems')}
+                renderProfile={() => handlePageChange('Profile')}
+                renderSavedProblems={() => handlePageChange('SavedProblems')}
+                renderSignup={() => handlePageChange('Signup')}
+                renderSingleProblem={() => handlePageChange('SingleProblem')}
+                renderSolvedProblems={() => handlePageChange('SolvedProblems')}
+                active={currentPage}
+            />
+            <div>
+              {currentPage === "Login" ? (
+                <Login
+                renderSignup={() => handlePageChange('Signup')}
+                renderProfile={() => handlePageChange('Profile')}
+                />
+              ) : currentPage === "NewAnswer" ? (
+                <NewAnswer />
+              ) : currentPage === "NewProblem" ? (
+                <NewProblem />
+              ) : currentPage === "PostedProblems" ? (
+                <PostedProblems />
+              ) : currentPage === "Profile" ? (
+                <Profile />
+              ) : currentPage === "SavedProblems" ? (
+                <SavedProblems />
+              ) : currentPage === "Signup" ? (
+                <Signup />
+              ) : currentPage === "SingleProblem" ? (
+                <SingleProblem /> 
+              ) : currentPage === "SolvedProblems" ? (
+                <SolvedProblems />
+              ) : (<Landing
+                renderLogin={() => handlePageChange('Login')}
+                renderSignup={() => handlePageChange('Signup')}
+              />)}
+              </div>
+        </main>
+    </div>
+    
+    <footer>Thanks for visiting!</footer>
+
             {/* <Nav
                 currentPage={currentPage}
                 handlePageChange={handlePageChange}
@@ -66,6 +93,7 @@ function App() {
     </div>
     
     {/* <Footer></Footer> */}
+
     </React.Fragment>
     
 );

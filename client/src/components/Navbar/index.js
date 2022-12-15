@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Nav(props) {
+const Nav = ({ renderLanding, renderLogin, renderNewAnswer, renderNewProblem, renderPostedProblems, renderProfile, renderSavedProblems, renderSignup, renderSingleProblem, renderSolvedProblems }) => {
     const tabs = ['Home', 'Search', 'Notification', 'Favorites', 'Profile', 'Saves']
 
     return (
