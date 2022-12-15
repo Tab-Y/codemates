@@ -1,11 +1,21 @@
 import React from "react"
 
+const styles = {
+    h2: {
+        color: '#c4fff9',
+    },
+    list: {
+        backgroundColor: '#c4fff9',
+        color: '#051923',
+    }
+}
+
 const CreateAnswer = () => {
 
     return (
         <div>
             <section>
-                <h2 class="answer">Answer</h2>
+                <h2 class="answer" style={styles.h2}>Answer</h2>
             </section>
             <div class="card-group">
                 <div class="card">
@@ -18,13 +28,13 @@ const CreateAnswer = () => {
             </div>
             <button type="button" class="btn btn-primary create-btn">Create Answer</button>
             <section>
-                <h2 class="other">Other Answers</h2>
-                <ul class="list-group">
-                    <li class="list-group-item">An item</li>
-                    <li class="list-group-item">A second item</li>
-                    <li class="list-group-item">A third item</li>
-                    <li class="list-group-item">A fourth item</li>
-                    <li class="list-group-item">And a fifth one</li>
+                <h2 class="other" style={styles.h2}>Other Answers</h2>
+                <ul class="list-group other-list">
+                    <li class="list-group-item" style={styles.list}>An item</li>
+                    <li class="list-group-item" style={styles.list}>A second item</li>
+                    <li class="list-group-item" style={styles.list}>A third item</li>
+                    <li class="list-group-item" style={styles.list}>A fourth item</li>
+                    <li class="list-group-item" style={styles.list}>And a fifth one</li>
                 </ul>
             </section>
         </div>

@@ -1,5 +1,7 @@
 import React from 'react';
 import Logo from '../images/logo.jpg';
+import { Link } from "react-router-dom";
+
 
 const Login = ({ renderSignup, renderProfile }) => {
     return (
@@ -19,8 +21,8 @@ const Login = ({ renderSignup, renderProfile }) => {
               <div class="mb-3">
                 <input type="password" class="form-control loginInput" placeholder="Password"></input>
             </div>
-              <button onClick={renderProfile}>Login</button>
-              <p>Need to create an account? <a onClick={renderSignup}>Create account</a></p>
+              <button ><Link to=""></Link>Login</button>
+              <p>Need to create an account? <a><Link to="/signup">Create account</Link></a></p>
             </div>
           </div>
         </div>
