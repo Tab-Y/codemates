@@ -13,7 +13,7 @@ const Landing = ({ renderSignup, renderLogin }) => {
       
       <div class="split right">
         <div class="centered">
-          <h2>Welcome</h2>
+          <h3>Welcome</h3>
           <p id="welcomePara">This is a social, coder community designed to connect fellow coders to post and solve issues for one another. Build up karma points by solving problems for fellow coders, post your own problems for help, and get to know your fellow codemates. Sign up now!</p>
           <button><Link to="/signup">Sign up</Link></button>
           <button><Link to="/login">Login</Link></button>

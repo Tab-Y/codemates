@@ -12,7 +12,7 @@ const Signup = () => {
 
             <div class="split right">
                 <div class="centered">
-                    <h2 class="loginHeading">Create Account</h2>
+                    <h3 class="loginHeading">Create Account</h3>
                     <div class="mb-3">
                         <input type="firstName" class="form-control loginInput" placeholder="First Name"></input>
                     </div>

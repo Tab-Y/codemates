@@ -7,11 +7,11 @@ const Home = () => {
   <header>
     <img src={Logo} alt="Logo"></img>
     <div class="p-5 text-center" style={{backgroundColor: "#c4fff9"}}>
-      <h1 class="mb-3">Welcome to Codemates</h1>
-      <h4 class="mb-3">Get started by searching for problems to solve!</h4>
+      <h3 class="mb-3">Welcome to Codemates</h3>
+      <h5 class="mb-3">Get started by searching for problems to solve!</h5>
     </div>
   </header>
-  <main>
+
   <div class="container">
     <div class="row">
       <div class="col-4" style={{width: "18rem", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center"}}>
@@ -46,7 +46,6 @@ const Home = () => {
       </div>
     </div>
   </div>
-</main>
 </div>
         );
     };
