@@ -21,7 +21,7 @@ router.post('/', async (req, res) => {
 });
 
 // read
-router.get('/', async (req, res) => {
+router.get('/:id', async (req, res) => {
     try {
 
     } catch (err) {
@@ -41,6 +41,9 @@ router.put('/', async (req, res) => {
 // delete
 router.delete('/', async (req, res) => {
     try {
+        const data = await Model.destroy({
+            where: { id: req.body.id }
+        })
 
     } catch (err) {
         res.status(500).json(err)
