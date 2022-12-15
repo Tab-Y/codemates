@@ -202,20 +202,17 @@ h2 {
 /* --------------End of Posted Problem Page-------------- */
 
 /* ---------------------Profile Page--------------------- */
-body {
-  background-color: var(--roy-back);
-}
-h1 {
+.username {
   color: var(--lit-high);
   margin-left: 8cm;
   margin-top: 2cm;
 }
-h2 {
-  color: var(--lit-high);
-}
 .bank-point {
+  width: 18rem;
   margin-left: 2cm;
   margin-top: 6cm;
+  background-color: #3dccc7;
+  color: var(--roy-back);
 }
 .card-header {
   text-align: center;
@@ -227,20 +224,6 @@ h2 {
 .solve {
   margin-left: 15cm;
   margin-top: 1cm;
-}
-.post-history  {
-  width: 70rem;
-  margin-left: 15cm;
-  margin-top: 1cm;
-}
-.solved-history {
-  width: 70rem;
-  margin-left: 15cm;
-  margin-top: 1cm;
-}
-.post-btn, .solve-btn {
-  margin-left: 40cm;
-  color: var(--dark-acc);
 }
 /* card still need some styling */
 /* ----------------End of the Profile Page-------------- */

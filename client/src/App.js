@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-// import logo from './logo.svg';
+import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar';
 import Landing from './components/Landing';
-import Home from './components/Home';
 import Login from './components/Login';
 import NewAnswer from './components/NewAnswer';
 import NewProblem from './components/NewProblem';
@@ -13,9 +12,7 @@ import SavedProblems from './components/SavedProblems';
 import Signup from './components/Signup';
 import SingleProblem from './components/SingleProblem';
 import SolvedProblems from './components/SolvedProblems';
-import About from './components/About';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
 
 function App() {
 
@@ -38,8 +35,10 @@ function App() {
   // ---------------------------------------------------------------
 
   return (
+    <Router>
 
-  {/* <Footer></Footer> */ }
+      <React.Fragment>
+
         <div>
           <main>
             <Navbar />
@@ -85,10 +84,9 @@ function App() {
           </main>
         </div>
 
-
         <footer>Thanks for visiting!</footer>
-      </React.Fragment >
-    </Router >
+      </React.Fragment>
+    </Router>
 
   );
 }
