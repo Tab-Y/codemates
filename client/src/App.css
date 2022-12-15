@@ -151,17 +151,9 @@ main {
   transform: translateY(-50%);
   bottom: initial;
   }
-  /* ---------------------End of About CSS--------------------------- */
+/* ---------------------End of About CSS--------------------------- */
   
 /* ---------------Solved Problems Page------------ */
-body {
-  background-color: var(--roy-back);
-}
-h2 {
-  color: var(--lit-high);
-  margin-left: 8cm;
-  margin-top: 4cm;
-}
 .btn {
   background-color: #006494;
   color: white;
@@ -174,7 +166,6 @@ h2 {
   margin-left: 10cm;
   margin-top: 0.1cm
 }
-/* list group needs styling */
 /* ----------------End of Solved Problem Page------------ */
 
 /* ----------------Posted Problems Page----------------- */
