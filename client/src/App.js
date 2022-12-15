@@ -12,6 +12,7 @@ import SavedProblems from './components/SavedProblems';
 import Signup from './components/Signup';
 import SingleProblem from './components/SingleProblem';
 import SolvedProblems from './components/SolvedProblems';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
 
@@ -34,69 +35,60 @@ function App() {
   // ---------------------------------------------------------------
 
   return (
-    <React.Fragment>
+    <Router>
 
-    <div>
-        <main>
+      <React.Fragment>
 
-            <Navbar
-                renderLanding={() => handlePageChange('landing')}
-                renderLogin={() => handlePageChange('Login')}
-                renderNewAnswer={() => handlePageChange('NewAnswer')}
-                renderNewProblem={() => handlePageChange('NewProblem')}
-                renderPostedProblems={() => handlePageChange('PostedProblems')}
-                renderProfile={() => handlePageChange('Profile')}
-                renderSavedProblems={() => handlePageChange('SavedProblems')}
-                renderSignup={() => handlePageChange('Signup')}
-                renderSingleProblem={() => handlePageChange('SingleProblem')}
-                renderSolvedProblems={() => handlePageChange('SolvedProblems')}
-                active={currentPage}
-            />
-            <div>
-              {currentPage === "Login" ? (
-                <Login
-                renderSignup={() => handlePageChange('Signup')}
-                renderProfile={() => handlePageChange('Profile')}
-                />
-              ) : currentPage === "NewAnswer" ? (
-                <NewAnswer />
-              ) : currentPage === "NewProblem" ? (
-                <NewProblem />
-              ) : currentPage === "PostedProblems" ? (
-                <PostedProblems />
-              ) : currentPage === "Profile" ? (
-                <Profile />
-              ) : currentPage === "SavedProblems" ? (
-                <SavedProblems />
-              ) : currentPage === "Signup" ? (
-                <Signup />
-              ) : currentPage === "SingleProblem" ? (
-                <SingleProblem /> 
-              ) : currentPage === "SolvedProblems" ? (
-                <SolvedProblems />
-              ) : (<Landing
-                renderLogin={() => handlePageChange('Login')}
-                renderSignup={() => handlePageChange('Signup')}
-              />)}
-              </div>
-        </main>
-    </div>
-    
-    <footer>Thanks for visiting!</footer>
+        <div>
+          <main>
+            <Navbar />
+            <Routes>
+              <Route
+                path='/'
+                element={<Landing />}
+              />
+              <Route
+                path='/Login'
+                element={<Login />}
+              />
+              <Route
+                path='/Signup'
+                element={<Signup />}
+              />
+              <Route
+                path='/Profile'
+                element={<Profile />}
+              />
+              <Route
+                path='/NewProblem'
+                element={<NewProblem />}
+              />
+              <Route
+                path='/PostedProblems'
+                element={<PostedProblems />}
+              />
+              <Route
+                path='/SavedProblems'
+                element={<SavedProblems />}
+              />
+              <Route
+                path='/SingleProblem'
+                element={<SingleProblem />}
+              />
+              <Route
+                path='/SolvedProblems'
+                element={<SolvedProblems />}
+              />
 
-            {/* <Nav
-                currentPage={currentPage}
-                handlePageChange={handlePageChange}
-            /> */}
-            <div>{renderPage(currentPage)}</div>
-        </main>
-    </div>
-    
-    {/* <Footer></Footer> */}
+            </Routes>
+          </main>
+        </div>
 
-    </React.Fragment>
-    
-);
+        <footer>Thanks for visiting!</footer>
+      </React.Fragment>
+    </Router>
+
+  );
 }
 
 
