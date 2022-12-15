@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar';
@@ -57,15 +57,15 @@ function App() {
 
     <div>
         <main>
-            <Nav
+            {/* <Nav
                 currentPage={currentPage}
                 handlePageChange={handlePageChange}
-            />
+            /> */}
             <div>{renderPage(currentPage)}</div>
         </main>
     </div>
     
-    <Footer></Footer>
+    {/* <Footer></Footer> */}
     </React.Fragment>
     
 );
