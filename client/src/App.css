@@ -246,12 +246,6 @@ h2 {
 /* ----------------End of the Profile Page-------------- */
 
 /* ------------------Create Answer Page------------------- */
-body {
-  background-color: var(--roy-back);
-}
-h2 {
-  color: var(--lit-high);
-}
 .answer {
 margin-left: 9cm;
 margin-top: 8cm;
@@ -274,9 +268,13 @@ margin-top: -6.5cm;
   width: 40rem;
   margin-left: 28cm;
 }
+.card-body {
+  background-color: #9ceaef;
+  color: #051923;
+}
 /* -----------------End of Create Answer Page------------------ */
 
-/* ------------------Create Anwser Page----------------------- */
+/* ------------------New Anwser Page----------------------- */
 body {
   background-color: var(--roy-back);
 }
@@ -293,7 +291,7 @@ h2 {
   border-color: #006494;
   margin-left: 22cm;
 }
-/* -------------------End of Create Answer Page---------------- */
+/* -------------------End of New Answer Page---------------- */
 
 /* ----------------------Saved Problem Page-------------------- */
 body {
