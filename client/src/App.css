@@ -252,8 +252,8 @@ margin-top: -6.5cm;
   margin-left: 28cm;
 }
 .card-body {
-  background-color: #9ceaef;
-  color: #051923;
+  background-color: var(--lit-high);
+  color: var(--roy-back);
 }
 /* -----------------End of Create Answer Page------------------ */
 
@@ -269,14 +269,6 @@ margin-top: -6.5cm;
 /* -------------------End of New Answer Page---------------- */
 
 /* ----------------------Saved Problem Page-------------------- */
-body {
-    background-color: var(--roy-back);
-}
-h2 {
-    color: var(--lit-high);
-    margin-left: 10cm;
-    margin-top: 5cm;
-}
 .problem-list {
     width: 70rem;
     margin-left: 10cm;
