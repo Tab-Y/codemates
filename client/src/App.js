@@ -38,6 +38,7 @@ function App() {
 
     <div>
         <main>
+
             <Navbar
                 renderLanding={() => handlePageChange('landing')}
                 renderLogin={() => handlePageChange('Login')}
@@ -82,6 +83,17 @@ function App() {
     </div>
     
     <footer>Thanks for visiting!</footer>
+
+            {/* <Nav
+                currentPage={currentPage}
+                handlePageChange={handlePageChange}
+            /> */}
+            <div>{renderPage(currentPage)}</div>
+        </main>
+    </div>
+    
+    {/* <Footer></Footer> */}
+
     </React.Fragment>
     
 );
