@@ -38,70 +38,8 @@ function App() {
   // ---------------------------------------------------------------
 
   return (
-    <Router>
 
-      <React.Fragment>
-
-            <Navbar
-                renderLanding={() => handlePageChange('landing')}
-                renderLogin={() => handlePageChange('Login')}
-                renderHome={() => handlePageChange('Home')}
-                renderNewAnswer={() => handlePageChange('NewAnswer')}
-                renderNewProblem={() => handlePageChange('NewProblem')}
-                renderPostedProblems={() => handlePageChange('PostedProblems')}
-                renderProfile={() => handlePageChange('Profile')}
-                renderSavedProblems={() => handlePageChange('SavedProblems')}
-                renderSignup={() => handlePageChange('Signup')}
-                renderSingleProblem={() => handlePageChange('SingleProblem')}
-                renderSolvedProblems={() => handlePageChange('SolvedProblems')}
-                renderAbout={() => handlePageChange('About')}
-                active={currentPage}
-            />
-            <div>
-              {currentPage === "Login" ? (
-                <Login
-                renderSignup={() => handlePageChange('Signup')}
-                renderProfile={() => handlePageChange('Profile')}
-                />
-              ) : currentPage === "Home" ? (
-                <Home />
-              ) : currentPage === "NewAnswer" ? (
-                <NewAnswer />
-              ) : currentPage === "NewProblem" ? (
-                <NewProblem />
-              ) : currentPage === "PostedProblems" ? (
-                <PostedProblems />
-              ) : currentPage === "Profile" ? (
-                <Profile />
-              ) : currentPage === "SavedProblems" ? (
-                <SavedProblems />
-              ) : currentPage === "Signup" ? (
-                <Signup />
-              ) : currentPage === "SingleProblem" ? (
-                <SingleProblem /> 
-              ) : currentPage === "SolvedProblems" ? (
-                <SolvedProblems />
-              ) : currentPage === "About" ? (
-                <About />
-              ) : (<Landing
-                renderLogin={() => handlePageChange('Login')}
-                renderSignup={() => handlePageChange('Signup')}
-              />)}
-              </div>
-        </main>
-    </div>
-    
-    <footer>Thanks for visiting!</footer>
-
-            {/* <Nav
-                currentPage={currentPage}
-                handlePageChange={handlePageChange}
-            /> */}
-            {/* <div>{renderPage(currentPage)}</div> */}
-   
-    
-    {/* <Footer></Footer> */}
-
+  {/* <Footer></Footer> */ }
         <div>
           <main>
             <Navbar />
@@ -149,8 +87,8 @@ function App() {
 
 
         <footer>Thanks for visiting!</footer>
-      </React.Fragment>
-    </Router>
+      </React.Fragment >
+    </Router >
 
   );
 }
