@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar';
 import Landing from './components/Landing';
+import Home from './components/Home';
 import Login from './components/Login';
 import NewAnswer from './components/NewAnswer';
 import NewProblem from './components/NewProblem';
@@ -12,6 +13,7 @@ import SavedProblems from './components/SavedProblems';
 import Signup from './components/Signup';
 import SingleProblem from './components/SingleProblem';
 import SolvedProblems from './components/SolvedProblems';
+import About from './components/About';
 
 function App() {
 
@@ -42,6 +44,7 @@ function App() {
             <Navbar
                 renderLanding={() => handlePageChange('landing')}
                 renderLogin={() => handlePageChange('Login')}
+                renderHome={() => handlePageChange('Home')}
                 renderNewAnswer={() => handlePageChange('NewAnswer')}
                 renderNewProblem={() => handlePageChange('NewProblem')}
                 renderPostedProblems={() => handlePageChange('PostedProblems')}
@@ -50,6 +53,7 @@ function App() {
                 renderSignup={() => handlePageChange('Signup')}
                 renderSingleProblem={() => handlePageChange('SingleProblem')}
                 renderSolvedProblems={() => handlePageChange('SolvedProblems')}
+                renderAbout={() => handlePageChange('About')}
                 active={currentPage}
             />
             <div>
@@ -58,6 +62,8 @@ function App() {
                 renderSignup={() => handlePageChange('Signup')}
                 renderProfile={() => handlePageChange('Profile')}
                 />
+              ) : currentPage === "Home" ? (
+                <Home />
               ) : currentPage === "NewAnswer" ? (
                 <NewAnswer />
               ) : currentPage === "NewProblem" ? (
@@ -74,6 +80,8 @@ function App() {
                 <SingleProblem /> 
               ) : currentPage === "SolvedProblems" ? (
                 <SolvedProblems />
+              ) : currentPage === "About" ? (
+                <About />
               ) : (<Landing
                 renderLogin={() => handlePageChange('Login')}
                 renderSignup={() => handlePageChange('Signup')}
@@ -88,9 +96,8 @@ function App() {
                 currentPage={currentPage}
                 handlePageChange={handlePageChange}
             /> */}
-            <div>{renderPage(currentPage)}</div>
-        </main>
-    </div>
+            {/* <div>{renderPage(currentPage)}</div> */}
+   
     
     {/* <Footer></Footer> */}
 

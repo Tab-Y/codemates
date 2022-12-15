@@ -10,7 +10,7 @@ const About = () => {
         <div>
         <header>
           <img src={Logo} alt="Logo"></img>
-          <div class="p-5 text-center" style="background-color: #c4fff9">
+          <div class="p-5 text-center" style={{backgroundColor: "#c4fff9"}}>
             <h1 class="mb-3">Meet our developers</h1>
             <h4 class="mb-3">We are UCF Bootcamp students learning Full-Stack Web Development. Check out our links below to view our previous work.</h4>
           </div>
@@ -27,7 +27,7 @@ const About = () => {
                 <div class="carousel-item active">
                   <img src={CPic1} class="d-block w-100" alt="CPic1"></img>
                   <div class="carousel-caption" style={{backgroundColor: "#051923"}}>
-                    <h1>Taber Youmans</h1>
+                    <h3>Taber Youmans</h3>
                     <a style={{color: "white"}} href="https://github.com/Tab-Y"><iconify-icon icon="ri:github-fill" width="100" height="100"></iconify-icon></a>
                       <a style={{color: "white"}} href="https://www.linkedin.com/in/taber-youmans-500587131/"><iconify-icon icon="mdi:linkedin" width="100" height="100"></iconify-icon></a>
                   </div>
@@ -35,7 +35,7 @@ const About = () => {
                 <div class="carousel-item">
                   <img src={CPic2} class="d-block w-100" alt="CPic2"></img>
                   <div class="carousel-caption" style={{backgroundColor: "#051923"}}>
-                    <h1>Maria Constanza</h1>
+                    <h3>Maria Constanza</h3>
                     <a style={{color: "white"}} href="https://github.com/MariaYConstanza"><iconify-icon icon="ri:github-fill" width="100" height="100"></iconify-icon></a>
                       <a style={{color: "white"}} href="https://www.linkedin.com/in/maria-constanza-09a1011b3/"><iconify-icon icon="mdi:linkedin" width="100" height="100"></iconify-icon></a>
                   </div>
@@ -43,7 +43,7 @@ const About = () => {
                 <div class="carousel-item">
                   <img src={CPic3} class="d-block w-100" alt="CPic3"></img>
                   <div class="carousel-caption" style={{backgroundColor: "#051923"}}>
-                    <h1>Zechariah Naitram</h1>
+                    <h3>Zechariah Naitram</h3>
                     <a style={{color: "white"}} href="https://github.com/Zechariahmn"><iconify-icon icon="ri:github-fill" width="100" height="100"></iconify-icon></a>
                       <a style={{color: "white"}} href="https://www.linkedin.com/in/zechariah-naitram-5179aa250/"><iconify-icon icon="mdi:linkedin" width="100" height="100"></iconify-icon></a>
                   </div>
@@ -51,7 +51,7 @@ const About = () => {
                 <div class="carousel-item">
                   <img src={CPic4} class="d-block w-100" alt="CPic4"></img>
                   <div class="carousel-caption" style={{backgroundColor: "#051923"}}>
-                    <h1>Jessica Almand</h1>
+                    <h3>Jessica Almand</h3>
                     <a style={{color: "white"}} href="https://github.com/jalmand2"><iconify-icon icon="ri:github-fill" width="100" height="100"></iconify-icon></a>
                       <a style={{color: "white"}} href="https://www.linkedin.com/in/jessicaalmand/"><iconify-icon icon="mdi:linkedin" width="100" height="100"></iconify-icon></a>
                   </div>
