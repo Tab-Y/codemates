@@ -33,10 +33,6 @@ const routes = require('./controllers')
 
 app.use(routes)
 
-// require('./controllers/index')(app);
-
-// sync is currently breaking server starting
-
 sequelize.sync({ force: true }).then(() => {
   app.listen(PORT, () => 
     console.log(`App listening on port ${PORT}!`)

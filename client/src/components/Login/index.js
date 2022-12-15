@@ -1,7 +1,7 @@
 import React from 'react';
 import Logo from '../images/logo.jpg';
 
-const Login = () => {
+const Login = ({ renderSignup, renderProfile }) => {
     return (
         <div>
         <div class="split left">
@@ -19,8 +19,8 @@ const Login = () => {
               <div class="mb-3">
                 <input type="password" class="form-control loginInput" placeholder="Password"></input>
             </div>
-              <button>Login</button>
-              <p>Need to create an account? <a href="/signup">Create account</a></p>
+              <button onClick={renderProfile}>Login</button>
+              <p>Need to create an account? <a onClick={renderSignup}>Create account</a></p>
             </div>
           </div>
         </div>
