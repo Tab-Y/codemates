@@ -309,3 +309,27 @@ h2 {
     margin-left: 10cm;
 }
 /* ----------------------------End of Saved Problem Page------------- */
+
+/* -----------------------------Single Problem Page---------------------- */
+body {
+  background-color: var(--roy-back);
+}
+h2 {
+  color: var(--lit-high);
+}
+.single {
+  margin-left: 5cm;
+  margin-top: 7cm;
+}
+.single-box {
+  margin-left: 4.7cm;
+}
+.answers {
+  margin-left: 24cm;
+  margin-top: -4cm;
+}
+.answer-box {
+  width: 50rem;
+  margin-left: 24cm;
+}
+/* -----------------------------End of Single Problem Page---------------------- */
