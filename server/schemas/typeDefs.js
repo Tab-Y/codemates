@@ -1,12 +1,15 @@
 const { gql } = require('apollo-server-express');
 
 const typeDefs = gql`
-  type Answer {
+  type User {
     _id: ID
-    answerId: String
-    answerContent: String
     username: String
-    createdAt: Date
+    password: String
+    email: String
+    firstName: String
+    lastName: String
+    karma: Number
+    questions: [Question]
   }
 
   type Question {
@@ -14,18 +17,15 @@ const typeDefs = gql`
     questionContent: String
     createdAt: Date
     username: String
-    answers: [Answer]
+    answers: [answerSchema]
   }
 
-  type User {
+  type Answer {
     _id: ID
+    answerId: String
+    answerContent: String
     username: String
-    password: String
-    firstName: String
-    lastName: String
-    email: String
-    karma: Number
-    questions: [Question]
+    createdAt: Date
   }
 
   type Auth {
