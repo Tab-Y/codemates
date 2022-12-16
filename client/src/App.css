@@ -269,22 +269,17 @@ margin-top: -6.5cm;
 /* ----------------------------End of Saved Problem Page------------- */
 
 /* -----------------------------Single Problem Page---------------------- */
-body {
-  background-color: var(--roy-back);
-}
-h2 {
-  color: var(--lit-high);
-}
 .single {
   margin-left: 5cm;
-  margin-top: 7cm;
+  margin-top: 8cm;
 }
 .single-box {
   margin-left: 4.7cm;
+  height: 20rem;
 }
 .answers {
   margin-left: 24cm;
-  margin-top: -4cm;
+  margin-top: -9cm;
 }
 .answer-box {
   width: 50rem;
