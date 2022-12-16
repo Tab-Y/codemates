@@ -286,3 +286,30 @@ margin-top: -6.5cm;
   margin-left: 24cm;
 }
 /* -----------------------------End of Single Problem Page---------------------- */
+
+/* -------------------------Create Answer Page------------------------ */
+.new {
+  margin-top: 8cm;
+  margin-left: 8cm;
+}
+.create-box {
+  width: 25rem;
+  height: 20rem;
+  margin-left: 8cm;
+}
+.post-btn {
+  background-color:#006494;
+  border-color: #006494;
+  margin-left: 8cm;
+  margin-top: 0.5cm;
+}
+.current {
+  margin-left: 28cm;
+  margin-top: -11.2cm;
+}
+.current-box {
+  width: 25rem;
+  height: 20rem;
+  margin-left: 28cm;
+}
+/* --------------------------End of Answer Page---------------------- */
