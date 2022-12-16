@@ -34,6 +34,12 @@ const userSchema = new Schema({
     karma: {
         type: Number,
     },
+    questions: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: 'Question',
+        }
+    ]
 });
 
 userSchema.pre('save', async function (next) {
