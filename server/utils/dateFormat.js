@@ -1,5 +1,3 @@
-// unsure if this will need to change
-
 // date format function provided in modules
 const addDateSuffix = (date) => {
   let dateStr = date.toString();
