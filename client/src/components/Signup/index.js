@@ -8,6 +8,8 @@ import Auth from '../../utils/auth';
 
 const Signup = () => {
     const [formState, setFormState] = useState({
+      firstName: '',
+      lastName: '',
       username: '',
       email: '',
       password: '',
@@ -39,15 +41,15 @@ const Signup = () => {
     };
     return (
         <div>
-            <div class="split left">
-                <div class="centered">
+            <div className="split left">
+                <div className="centered">
                     <img src={Logo} alt="Logo"></img>
                 </div>
             </div>
 
-            <div class="split right">
+            <div className="split right">
                 <div class="centered">
-                    <h3 class="loginHeading">Create Account</h3>
+                    <h3 className="loginHeading">Create Account</h3>
                     {data ? (
               <p>
                 Success! You may now head{' '}
@@ -55,14 +57,20 @@ const Signup = () => {
               </p>
             ) : (
               <form onSubmit={handleFormSubmit}>
+                <div className="mb-3">
+                        <input name="firstName" type="firstName" className="form-input loginInput" placeholder="Enter your first name" value={formState.firstName} onChange={handleChange}></input>
+                        </div>
+                        <div class="mb-3">
+                        <input name="lastName" type="lastName" className="form-input loginInput" placeholder="Enter your last name" value={formState.lastName} onChange={handleChange}></input>
+                        </div>
                 <div class="mb-3">
-                        <input name="username" type="username" className="form-input" class="loginInput" placeholder="Create a username" value={formState.name} onChange={handleChange}></input>
+                        <input name="username" type="username" className="form-input loginInput" placeholder="Create a username" value={formState.name} onChange={handleChange}></input>
                         </div>
                         <div class="mb-3">
-                        <input name="email" type="email" className="form-input" class="loginInput" placeholder="Enter your email" value={formState.email} onChange={handleChange}></input>
+                        <input name="email" type="email" className="form-input loginInput" placeholder="Enter your email" value={formState.email} onChange={handleChange}></input>
                         </div>
                         <div class="mb-3">
-                        <input name="password" type="password" className="form-input" class="loginInput" placeholder="Create a password" value={formState.password} onChange={handleChange}></input>
+                        <input name="password" type="password" className="form-input loginInput" placeholder="Create a password" value={formState.password} onChange={handleChange}></input>
                         </div>
                     <button>Create Account</button>
                     </form>
@@ -72,7 +80,7 @@ const Signup = () => {
                   {error.message}
                 </div>
               )}
-              <p>Already have an account? <a><Link to="/login">Login to existing account</Link></a></p>
+              <p>Already have an account? <Link to="/login">Login to existing account</Link></p>
                 </div>
             </div>
         </div>

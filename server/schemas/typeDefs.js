@@ -1,37 +1,31 @@
 const { gql } = require('apollo-server-express');
 
 const typeDefs = gql`
-  type Category {
-    _id: ID
-    name: String
-  }
-
-  type Product {
-    _id: ID
-    name: String
-    description: String
-    image: String
-    quantity: Int
-    price: Float
-    category: Category
-  }
-
-  type Order {
-    _id: ID
-    purchaseDate: String
-    products: [Product]
-  }
-
   type User {
     _id: ID
+    username: String
+    password: String
+    email: String
     firstName: String
     lastName: String
-    email: String
-    orders: [Order]
+    karma: Number
+    questions: [Question]
   }
 
-  type Checkout {
-    session: ID
+  type Question {
+    _id: ID
+    questionContent: String
+    createdAt: Date
+    username: String
+    answers: [answerSchema]
+  }
+
+  type Answer {
+    _id: ID
+    answerId: String
+    answerContent: String
+    username: String
+    createdAt: Date
   }
 
   type Auth {
@@ -40,21 +34,20 @@ const typeDefs = gql`
   }
 
   type Query {
-    categories: [Category]
-    products(category: ID, name: String): [Product]
-    product(_id: ID!): Product
-    user: User
-    order(_id: ID!): Order
-    checkout(products: [ID]!): Checkout
+    users: [User]
+    user(username: String!): User
+    me: User
+    questions: [Question]
+    question(username: String!): User
   }
 
   type Mutation {
-    addUser(firstName: String!, lastName: String!, email: String!, password: String!): Auth
-    addOrder(products: [ID]!): Order
-    updateUser(firstName: String, lastName: String, email: String, password: String): User
-    updateProduct(_id: ID!, quantity: Int!): Product
-    login(email: String!, password: String!): Auth
+    createUser(username: String!, password: String!, firstName: String!, lastName: String!, email: String!): User
+    login(username: String!, password: String!): Auth
+    createQuestion(questionContent: String!): Question
+    createAnswer(answerId: String!, answerContent: String!): Answer
   }
+  
 `;
 
 module.exports = typeDefs;

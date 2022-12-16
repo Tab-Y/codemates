@@ -55,17 +55,17 @@ const Login = (props) => {
             {data ? (
               <p>
                 Success! You may now head{' '}
-                <Link to="/">back to the homepage.</Link>
+                <Link to="/Home">back to the homepage.</Link>
               </p>
             ) : (
               <form onSubmit={handleFormSubmit}>
                 <div class="mb-3">
-                <input name="email" type="email" className="form-input" class="loginInput" placeholder="Email address" value={formState.email} onChange={handleChange}></input>
+                <input name="email" type="email" className="form-input loginInput" placeholder="Email address" value={formState.email} onChange={handleChange}></input>
                 </div>
                 <div class="mb-3">
-                <input name="password" type="password" className="form-input" class="loginInput" placeholder="Password" value={formState.password} onChange={handleChange}></input>
+                <input name="password" type="password" className="form-input loginInput" placeholder="Password" value={formState.password} onChange={handleChange}></input>
                 </div>
-                <button ><Link to=""></Link>Login</button>
+                <button ><Link to="/Home"></Link>Login</button>
               </form>
             )}
 
@@ -74,7 +74,7 @@ const Login = (props) => {
                 {error.message}
               </div>
             )}
-            <p>Need to create an account? <a><Link to="/signup">Create account</Link></a></p>
+            <p>Need to create an account? <Link to="/signup">Create account</Link></p>
           </div>
         </div>
       </div>
