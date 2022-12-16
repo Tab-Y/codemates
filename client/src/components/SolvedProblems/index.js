@@ -1,18 +1,30 @@
 import React from "react";
 
+const styles = {
+    h2: {
+        color: '#c4fff9',
+        marginLeft: '8cm',
+        marginTop: '8cm',
+    },
+    list: {
+        backgroundColor: '#c4fff9',
+        color: '#051923',
+    }
+}
+
 const SolvedProblems = () => {
 
     return (
         <div>
-            <h2>Solved Problems</h2>
+            <h2 style={styles.h2}>Solved Problems</h2>
             <button type="button" class="btn btn-primary">Back to Profile</button>
             <section class="solved-list">
                 <ul class="list-group">
-                    <li class="list-group-item">An item</li>
-                    <li class="list-group-item">A second item</li>
-                    <li class="list-group-item">A third item</li>
-                    <li class="list-group-item">A fourth item</li>
-                    <li class="list-group-item">And a fifth one</li>
+                    <li class="list-group-item" style={styles.list}>An item</li>
+                    <li class="list-group-item" style={styles.list}>A second item</li>
+                    <li class="list-group-item" style={styles.list}>A third item</li>
+                    <li class="list-group-item" style={styles.list}>A fourth item</li>
+                    <li class="list-group-item" style={styles.list}>And a fifth one</li>
                 </ul>
             </section>
         </div>

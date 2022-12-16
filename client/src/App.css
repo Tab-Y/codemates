@@ -151,17 +151,9 @@ main {
   transform: translateY(-50%);
   bottom: initial;
   }
-  /* ---------------------End of About CSS--------------------------- */
+/* ---------------------End of About CSS--------------------------- */
   
 /* ---------------Solved Problems Page------------ */
-body {
-  background-color: var(--roy-back);
-}
-h2 {
-  color: var(--lit-high);
-  margin-left: 8cm;
-  margin-top: 4cm;
-}
 .btn {
   background-color: #006494;
   color: white;
@@ -174,18 +166,9 @@ h2 {
   margin-left: 10cm;
   margin-top: 0.1cm
 }
-/* list group needs styling */
 /* ----------------End of Solved Problem Page------------ */
 
 /* ----------------Posted Problems Page----------------- */
-body {
-  background-color: var(--roy-back);
-}
-h2 {
-  color: var(--lit-high);
-  margin-left: 8cm;
-  margin-top: 4cm;
-}
 .btn {
   background-color: #006494;
   color: white;
@@ -202,20 +185,17 @@ h2 {
 /* --------------End of Posted Problem Page-------------- */
 
 /* ---------------------Profile Page--------------------- */
-body {
-  background-color: var(--roy-back);
-}
-h1 {
+.username {
   color: var(--lit-high);
   margin-left: 8cm;
   margin-top: 2cm;
 }
-h2 {
-  color: var(--lit-high);
-}
 .bank-point {
+  width: 18rem;
   margin-left: 2cm;
   margin-top: 6cm;
+  background-color: #3dccc7;
+  color: var(--roy-back);
 }
 .card-header {
   text-align: center;
@@ -227,20 +207,6 @@ h2 {
 .solve {
   margin-left: 15cm;
   margin-top: 1cm;
-}
-.post-history  {
-  width: 70rem;
-  margin-left: 15cm;
-  margin-top: 1cm;
-}
-.solved-history {
-  width: 70rem;
-  margin-left: 15cm;
-  margin-top: 1cm;
-}
-.post-btn, .solve-btn {
-  margin-left: 40cm;
-  color: var(--dark-acc);
 }
 /* card still need some styling */
 /* ----------------End of the Profile Page-------------- */
@@ -269,20 +235,12 @@ margin-top: -6.5cm;
   margin-left: 28cm;
 }
 .card-body {
-  background-color: #9ceaef;
-  color: #051923;
+  background-color: var(--lit-high);
+  color: var(--roy-back);
 }
 /* -----------------End of Create Answer Page------------------ */
 
-/* ------------------New Anwser Page----------------------- */
-body {
-  background-color: var(--roy-back);
-}
-h2 {
-  color: var(--lit-high);
-  margin-left: 20cm;
-  margin-top: 5cm;
-}
+/* ------------------New Problem Page----------------------- */
 .create-card {
   margin-left: 20cm;
 }
@@ -294,15 +252,7 @@ h2 {
 /* -------------------End of New Answer Page---------------- */
 
 /* ----------------------Saved Problem Page-------------------- */
-body {
-    background-color: var(--roy-back);
-}
-h2 {
-    color: var(--lit-high);
-    margin-left: 10cm;
-    margin-top: 5cm;
-}
-.list-group {
+.problem-list {
     width: 70rem;
     margin-left: 10cm;
 }
