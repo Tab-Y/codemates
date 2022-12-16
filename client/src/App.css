@@ -181,7 +181,6 @@ main {
   margin-left: 10cm;
   margin-top: 0.1cm
 }
-/* list group needs styling */
 /* --------------End of Posted Problem Page-------------- */
 
 /* ---------------------Profile Page--------------------- */
@@ -208,7 +207,6 @@ main {
   margin-left: 15cm;
   margin-top: 1cm;
 }
-/* card still need some styling */
 /* ----------------End of the Profile Page-------------- */
 
 /* ------------------Create Answer Page------------------- */
@@ -220,11 +218,17 @@ margin-top: 8cm;
   width: 30rem;
   margin-left: 9cm;
 }
-.create-btn {
+.solve-btn{
   background-color: #006494;
   border-color: #006494;
-  margin-left: 9cm;
-  margin-top: 0.5cm
+  margin-left: 12cm;
+  margin-top: 0.5cm;
+}
+.reply-btn {
+  background-color: #006494;
+  border-color: #006494;
+  margin-left: 1cm;
+  margin-top: 0.5cm;
 }
 .other {
 margin-left: 28cm;
@@ -238,6 +242,12 @@ margin-top: -6.5cm;
   background-color: var(--lit-high);
   color: var(--roy-back);
 }
+.create-btn {
+  background-color: #006494;
+  border-color: #006494;
+  margin-left: 9cm;
+  margin-top: 0.5cm
+}
 /* -----------------End of Create Answer Page------------------ */
 
 /* ------------------New Problem Page----------------------- */
@@ -249,7 +259,7 @@ margin-top: -6.5cm;
   border-color: #006494;
   margin-left: 22cm;
 }
-/* -------------------End of New Answer Page---------------- */
+/* -------------------End of New Problem Page---------------- */
 
 /* ----------------------Saved Problem Page-------------------- */
 .problem-list {
@@ -259,22 +269,17 @@ margin-top: -6.5cm;
 /* ----------------------------End of Saved Problem Page------------- */
 
 /* -----------------------------Single Problem Page---------------------- */
-body {
-  background-color: var(--roy-back);
-}
-h2 {
-  color: var(--lit-high);
-}
 .single {
   margin-left: 5cm;
-  margin-top: 7cm;
+  margin-top: 8cm;
 }
 .single-box {
   margin-left: 4.7cm;
+  height: 20rem;
 }
 .answers {
   margin-left: 24cm;
-  margin-top: -4cm;
+  margin-top: -9cm;
 }
 .answer-box {
   width: 50rem;

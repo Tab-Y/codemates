@@ -26,7 +26,8 @@ const CreateAnswer = () => {
                     </div>
                 </div>
             </div>
-            <button type="button" class="btn btn-primary create-btn">Create Answer</button>
+            <button type="button" class="btn btn-primary solve-btn">Marked as Solved</button>
+            <button type="button" class="btn btn-primary reply-btn">Reply.. </button>
             <section>
                 <h2 class="other" style={styles.h2}>Other Answers</h2>
                 <ul class="list-group other-list">
@@ -36,6 +37,7 @@ const CreateAnswer = () => {
                     <li class="list-group-item" style={styles.list}>A fourth item</li>
                     <li class="list-group-item" style={styles.list}>And a fifth one</li>
                 </ul>
+                <button type="button" class="btn btn-primary create-btn">Create Answer</button>
             </section>
         </div>
     );
