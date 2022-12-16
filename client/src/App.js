@@ -40,51 +40,71 @@ function App() {
       <React.Fragment>
 
         <div>
+
           <main>
+
             <Navbar />
+
             <Routes>
+
               <Route
                 path='/'
                 element={<Landing />}
               />
+
               <Route
                 path='/Login'
                 element={<Login />}
               />
+
               <Route
                 path='/Signup'
                 element={<Signup />}
               />
+
               <Route
                 path='/Profile'
                 element={<Profile />}
               />
+
               <Route
                 path='/NewProblem'
                 element={<NewProblem />}
               />
+
               <Route
                 path='/PostedProblems'
                 element={<PostedProblems />}
               />
+
               <Route
                 path='/SavedProblems'
                 element={<SavedProblems />}
               />
+
               <Route
                 path='/SingleProblem'
                 element={<SingleProblem />}
               />
+
               <Route
                 path='/SolvedProblems'
                 element={<SolvedProblems />}
               />
 
+              <Route
+                path='/NewAnswer'
+                element={<NewAnswer/>}
+              />
+
             </Routes>
+
           </main>
+
         </div>
 
         <footer>Thanks for visiting!</footer>
+        
       </React.Fragment>
     </Router>
 

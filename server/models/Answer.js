@@ -1,41 +1,34 @@
-const { Model, DataTypes } = require('sequelize');
-const bcrypt = require('bcrypt');
-const sequelize = require('../config/connection');
+const { Schema, model, Types } = require('mongoose');
+const dateFormat = require('../utils/dateFormat');
 
-class Answer extends Model {};
-
-
-Answer.init(
+const answerSchema = new Schema(
     {
-        id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            primaryKey: true,
-            autoIncrement: true,
+        answerId: {
+            type: Schema.Types.ObjectId,
+            default: () => Types.ObjectId(),
         },
         answerContent: {
-            type: DataTypes.TEXT,
+            type: String,
+            required: true,
+            minlength: 5,
+            maxlength: 280,
         },
-        userId:  {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'users',
-                key: 'id',
-            },
+        username: {
+            type: String,
+            required: true,
         },
-        answerCreated: {
-            type: DataTypes.DATE,
-            allowNull: false,
-            defaultValue: DataTypes.NOW,
+        createdAt: {
+            type: Date,
+            default: Date.now,
+            get: (timestamp) => dateFormat(timestamp),
         },
     },
-    {
-        sequelize,
-        timestamps: false,
-        freezeTableName: true,
-        underscored: true,
-        modelName: 'answers',
-    }
-)
+    {                               
+        toJSON: {
+          getters: true,
+        },
+        id: false,
+      },
+);
 
-module.exports = Answer;
+module.exports = answerSchema;
