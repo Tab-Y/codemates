@@ -12,6 +12,8 @@ import SavedProblems from './components/SavedProblems';
 import Signup from './components/Signup';
 import SingleProblem from './components/SingleProblem';
 import SolvedProblems from './components/SolvedProblems';
+import About from './components/About';
+import Home from './components/Home';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import {
   ApolloClient,
@@ -67,78 +69,88 @@ function App() {
 
   return (
     <ApolloProvider client={client}>
-    <Router>
+      <Router>
 
-      <React.Fragment>
+        <React.Fragment>
 
-        <div>
+          <div>
 
-          <main>
+            <main>
 
-            <Navbar />
+              <Navbar />
 
-            <Routes>
+              <Routes>
 
-              <Route
-                path='/'
-                element={<Landing />}
-              />
+                <Route
+                  path='/'
+                  element={<Landing />}
+                />
 
-              <Route
-                path='/Login'
-                element={<Login />}
-              />
+                <Route
+                  path='/Login'
+                  element={<Login />}
+                />
 
-              <Route
-                path='/Signup'
-                element={<Signup />}
-              />
+                <Route
+                  path='/Signup'
+                  element={<Signup />}
+                />
 
-              <Route
-                path='/Profile'
-                element={<Profile />}
-              />
+                <Route
+                  path='/Profile'
+                  element={<Profile />}
+                />
 
-              <Route
-                path='/NewProblem'
-                element={<NewProblem />}
-              />
+                <Route
+                  path='/NewProblem'
+                  element={<NewProblem />}
+                />
 
-              <Route
-                path='/PostedProblems'
-                element={<PostedProblems />}
-              />
+                <Route
+                  path='/PostedProblems'
+                  element={<PostedProblems />}
+                />
 
-              <Route
-                path='/SavedProblems'
-                element={<SavedProblems />}
-              />
+                <Route
+                  path='/SavedProblems'
+                  element={<SavedProblems />}
+                />
 
-              <Route
-                path='/SingleProblem'
-                element={<SingleProblem />}
-              />
+                <Route
+                  path='/SingleProblem'
+                  element={<SingleProblem />}
+                />
 
-              <Route
-                path='/SolvedProblems'
-                element={<SolvedProblems />}
-              />
+                <Route
+                  path='/SolvedProblems'
+                  element={<SolvedProblems />}
+                />
 
-              <Route
-                path='/NewAnswer'
-                element={<NewAnswer/>}
-              />
+                <Route
+                  path='/NewAnswer'
+                  element={<NewAnswer />}
+                />
 
-            </Routes>
+                <Route
+                  path='/About'
+                  element={<About />}
+                />
 
-          </main>
+                <Route
+                  path='/Home'
+                  element={<Home />}
+                />
 
-        </div>
+              </Routes>
 
-        <footer>Thanks for visiting!</footer>
-        
-      </React.Fragment>
-    </Router>
+            </main>
+
+          </div>
+
+          <footer>Thanks for visiting!</footer>
+
+        </React.Fragment>
+      </Router>
     </ApolloProvider>
   );
 }
