@@ -60,10 +60,10 @@ const Login = (props) => {
             ) : (
               <form onSubmit={handleFormSubmit}>
                 <div class="mb-3">
-                <input name="email" type="email" className="form-input" class="loginInput" placeholder="Email address" value={formState.email} onChange={handleChange}></input>
+                <input name="email" type="email" className="form-input loginInput" placeholder="Email address" value={formState.email} onChange={handleChange}></input>
                 </div>
                 <div class="mb-3">
-                <input name="password" type="password" className="form-input" class="loginInput" placeholder="Password" value={formState.password} onChange={handleChange}></input>
+                <input name="password" type="password" className="form-input loginInput" placeholder="Password" value={formState.password} onChange={handleChange}></input>
                 </div>
                 <button ><Link to="/Home"></Link>Login</button>
               </form>
