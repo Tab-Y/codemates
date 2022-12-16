@@ -8,6 +8,8 @@ import Auth from '../../utils/auth';
 
 const Signup = () => {
     const [formState, setFormState] = useState({
+      firstName: '',
+      lastName: '',
       username: '',
       email: '',
       password: '',
@@ -56,6 +58,12 @@ const Signup = () => {
             ) : (
               <form onSubmit={handleFormSubmit}>
                 <div class="mb-3">
+                        <input name="firstName" type="firstName" className="form-input" class="loginInput" placeholder="Enter your first name" value={formState.firstName} onChange={handleChange}></input>
+                        </div>
+                        <div class="mb-3">
+                        <input name="lastName" type="lastName" className="form-input" class="loginInput" placeholder="Enter your last name" value={formState.lastName} onChange={handleChange}></input>
+                        </div>
+                <div class="mb-3">
                         <input name="username" type="username" className="form-input" class="loginInput" placeholder="Create a username" value={formState.name} onChange={handleChange}></input>
                         </div>
                         <div class="mb-3">
@@ -72,7 +80,7 @@ const Signup = () => {
                   {error.message}
                 </div>
               )}
-              <p>Already have an account? <a><Link to="/login">Login to existing account</Link></a></p>
+              <p>Already have an account? <Link to="/login">Login to existing account</Link></p>
                 </div>
             </div>
         </div>
