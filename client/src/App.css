@@ -120,8 +120,9 @@ div button {
 }
 .loginInput {
   background-color: var(--roy-back);
+  color: white;
 }
-.form-control::placeholder {
+.form-input::placeholder {
   color: white;
 }
 /* --------------End of Login CSS----------------- */
