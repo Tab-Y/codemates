@@ -5,8 +5,8 @@
         "email": "testemail@email.com",
         "firstName": "Test",
         "lastName": "Testington",
-        "questionsId": [],
-        "answersId": [],
+        "questions": [],
+        "answers": [],
         "karma": 20
     },
     {
@@ -15,28 +15,48 @@
         "email": "gordan@blackmesa.com",
         "firstName": "Gordan",
         "lastName": "Freeman",
-        "questionsId": [],
-        "answersId": [],
+        "questions": [],
+        "answers": [],
         "karma": 5
     },
     {
-        "username": "theBestTest",
+        "username": "siRgideon",
         "password": "password1234",
-        "email": "thisIsaTest@mail.co",
-        "firstName": "Null",
-        "lastName": "Null",
-        "questionsId": [],
-        "answersId": [],
+        "email": "siRgideon@mail.co",
+        "firstName": "Gideon",
+        "lastName": "Graves",
+        "questions": [],
+        "answers": [],
         "karma": 15
     },
     {
-        "username": "XxRawrXDxX",
+        "username": "quizmaster",
         "password": "password1234",
-        "email": "scenekid@emo.com",
-        "firstName": "RawrXD",
-        "lastName": "Scene",
-        "questionsId": [],
-        "answersId": [],
+        "email": "quiz@gmail.com",
+        "firstName": "Quiz",
+        "lastName": "Master",
+        "questions": [],
+        "answers": [],
         "karma": 25
+    },
+    {
+        "username": "kingArthur",
+        "password": "password1234",
+        "email": "kingArthur@mail.co",
+        "firstName": "Arthur",
+        "lastName": "Pendragon",
+        "questions": [],
+        "answers": [],
+        "karma": 15
+    },
+    {
+        "username": "tester",
+        "password": "password1234",
+        "email": "tester@mail.co",
+        "firstName": "tester",
+        "lastName": "tester",
+        "questions": [],
+        "answers": [],
+        "karma": 20
     }
 ]
