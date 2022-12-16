@@ -5,6 +5,7 @@ const styles = {
         color: '#c4fff9',
         marginLeft: '8cm',
         marginTop: '8cm',
+        fontFamily: 'Comfortaa',
     },
     list: {
         backgroundColor: '#c4fff9',
@@ -17,7 +18,7 @@ const SolvedProblems = () => {
     return (
         <div>
             <h2 style={styles.h2}>Solved Problems</h2>
-            <button type="button" class="btn btn-primary">Back to Profile</button>
+            <button type="button" class="btn btn-primary solve-back-btn">Back to Profile</button>
             <section class="solved-list">
                 <ul class="list-group">
                     <li class="list-group-item" style={styles.list}>An item</li>

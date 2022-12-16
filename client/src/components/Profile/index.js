@@ -8,10 +8,6 @@ const styles = {
     backgroundColor: '#c4fff9',
     color: '#051923',
   },
-  link: {
-    marginLeft: '40cm',
-    color: '#07beb8'
-  },
   history: {
     width: '70rem',
     marginLeft: '15cm',
@@ -45,7 +41,7 @@ const Profile = () => {
           <li class="list-group-item" style={styles.body}>A fourth item</li>
           <li class="list-group-item" style={styles.body}>And a fifth one</li>
         </ul>
-        <button type="button" class="btn btn-link" style={styles.link}>View more posted problems</button>
+        <button type="button" class="btn btn-link post-link">View more posted problems</button>
       </section>
       <section>
         <h2 class="solve">Solved Problems</h2>
@@ -56,7 +52,7 @@ const Profile = () => {
           <li class="list-group-item" style={styles.body}>A fourth item</li>
           <li class="list-group-item" style={styles.body}>And a fifth one</li>
         </ul>
-        <button type="button" class="btn btn-link" style={styles.link}>View more solved problems</button>
+        <button type="button" class="btn btn-link solve-link">View more solved problems</button>
       </section>
     </div>
 

@@ -16,18 +16,21 @@ const CreateAnswer = () => {
         <div>
             <section>
                 <h2 class="answer" style={styles.h2}>Answer</h2>
-            </section>
-            <div class="card-group">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">This is the answer</h5>
-                        <p class="card-text">Answer description</p>
-                        <p class="card-text"><small class="text-muted">Created by username: date & time</small></p>
+                <div class="row row-cols-1 row-cols-md-3 g-4 answer-card">
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <p class="card-text">Problem description</p>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">Created by username: date & time</small>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <button type="button" class="btn btn-primary solve-btn">Marked as Solved</button>
-            <button type="button" class="btn btn-primary reply-btn">Reply.. </button>
+                <button type="button" class="btn btn-primary solve-btn">Marked as Solved</button>
+                <button type="button" class="btn btn-primary reply-btn">Reply.. </button>
+            </section>
             <section>
                 <h2 class="other" style={styles.h2}>Other Answers</h2>
                 <ul class="list-group other-list">
