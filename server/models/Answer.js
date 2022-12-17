@@ -31,4 +31,6 @@ const answerSchema = new Schema(
       },
 );
 
-module.exports = answerSchema;
+const Answer = model('Answer', answerSchema);
+
+module.exports = Answer;

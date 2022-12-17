@@ -22,25 +22,8 @@ const questionSchema = new Schema(
         answers: {
             type: [
                 {
-                    answerId: {
-                        type: Schema.Types.ObjectId,
-                        default: () => Types.ObjectId(),
-                    },
-                    answerContent: {
-                        type: String,
-                        required: true,
-                        minlength: 5,
-                        maxlength: 280,
-                    },
-                    username: {
-                        type: String,
-                        required: true,
-                    },
-                    createdAt: {
-                        type: Date,
-                        default: Date.now,
-                        get: (timestamp) => dateFormat(timestamp),
-                    },
+                    type: Schema.Types.ObjectId,
+                    ref: 'Answer',
                 },
             ],
         },
@@ -53,7 +36,7 @@ const questionSchema = new Schema(
     },
 )
 
-questionSchema.virtual('answerCount').get( () => {
+questionSchema.virtual('answerCount').get(() => {
     return this.answers.length;
 });
 

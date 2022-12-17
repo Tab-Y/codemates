@@ -1,5 +1,7 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
+const Answer = require('./Answer');
+const Question = require('./Question');
 
 const userSchema = new Schema({
     username: {
@@ -31,18 +33,8 @@ const userSchema = new Schema({
         unique: true,
         trim: true,
     },
-    questions: [
-        {
-            type: Schema.Types.ObjectId,
-            ref: 'Question',
-        }
-    ],
-    answers: [
-        {
-            type: Schema.Types.ObjectId,
-            ref: 'Answer',
-        }
-    ],
+    questions: [ Question.schema ],
+    answers: [ Answer.schema ],
     karma: {
         type: Number,
     }
