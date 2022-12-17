@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import logo from './logo.svg';
+import React from 'react';
+// import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar';
 import Landing from './components/Landing';
@@ -50,7 +50,7 @@ const client = new ApolloClient({
 function App() {
 
   //Set state default to Home
-  const [currentPage, handlePageChange] = useState("landing");
+  // const [currentPage, handlePageChange] = useState("landing");
 
   // useState functions for button/ nav onClick()
   // ---------------------------------------------------------------
