@@ -13,28 +13,16 @@ import {
   DropdownItem
 } from 'reactstrap';
 
-// const [dropdownOpen, setDropdownOpen] = useState(false);
-// const toggleDrop = () => setDropdownOpen(prevState => !prevState);
 
 class Navi extends React.Component {
   state = {
     isOpen: false,
   };
 
-  toggleNav = () => {
+  toggle = () => {
     this.setState({
       isOpen: !this.state.isOpen,
     });
-  };
-
-  dropdownOpen = {
-    isOpen: false,
-  };
-
-  toggleDrop = () => {
-    this.setState({
-      isOpen: !this.dropdownOpen.opened,
-    })
   };
 
 
@@ -46,8 +34,8 @@ class Navi extends React.Component {
       <div className='navi'>
 
         <Navbar color="light" light expand="md">
-          <NavbarBrand href="/landing">CodeMates</NavbarBrand>
-          <NavbarToggler onClick={this.toggleNav} />
+          <NavbarBrand href="/">CodeMates</NavbarBrand>
+          <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
@@ -60,7 +48,7 @@ class Navi extends React.Component {
                 <NavLink href="/favorite">Favorites</NavLink>
               </NavItem>
               <NavItem>
-                <Dropdown isOpen={this.state.isOpen} onClick={this.toggleDrop}>
+                <Dropdown isOpen={this.state.isOpen} onClick={this.toggle}>
                   <DropdownToggle caret>
                     Profile
                   </DropdownToggle>

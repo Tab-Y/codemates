@@ -31,15 +31,21 @@ const userSchema = new Schema({
         unique: true,
         trim: true,
     },
-    karma: {
-        type: Number,
-    },
     questions: [
         {
             type: Schema.Types.ObjectId,
             ref: 'Question',
         }
-    ]
+    ],
+    answers: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: 'Answer',
+        }
+    ],
+    karma: {
+        type: Number,
+    }
 });
 
 userSchema.pre('save', async function (next) {

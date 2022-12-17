@@ -1,5 +1,5 @@
-const { Schema, model } = require('mongoose');
-const { answerSchema } = require('./Answer');
+const { Schema, model, Types } = require('mongoose');
+// const { answerSchema } = require('./Answer');
 const dateFormat = require('../utils/dateFormat');
 
 const questionSchema = new Schema(
@@ -20,7 +20,29 @@ const questionSchema = new Schema(
             required: true,
         },
         answers: {
-            type: [answerSchema],
+            type: [
+                {
+                    answerId: {
+                        type: Schema.Types.ObjectId,
+                        default: () => Types.ObjectId(),
+                    },
+                    answerContent: {
+                        type: String,
+                        required: true,
+                        minlength: 5,
+                        maxlength: 280,
+                    },
+                    username: {
+                        type: String,
+                        required: true,
+                    },
+                    createdAt: {
+                        type: Date,
+                        default: Date.now,
+                        get: (timestamp) => dateFormat(timestamp),
+                    },
+                },
+            ],
         },
     },
     {                               // as shown in assignment 26
