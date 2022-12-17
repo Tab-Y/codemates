@@ -2,30 +2,31 @@ const { gql } = require('apollo-server-express');
 
 const typeDefs = gql`
   type User {
-    _id: ID
-    username: String
-    password: String
-    email: String
+    _id: ID!
+    username: String!
+    password: String!
+    email: String!
     firstName: String
     lastName: String
-    karma: Number
+    karma: Int
     questions: [Question]
   }
 
   type Question {
-    _id: ID
-    questionContent: String
-    createdAt: Date
-    username: String
+    _id: ID!
+    questionContent: String!
+    createdAt: String!
+    username: String!
     answers: [answerSchema]
+    answerCount: Int
   }
 
-  type Answer {
-    _id: ID
-    answerId: String
-    answerContent: String
-    username: String
-    createdAt: Date
+  type answerSchema {
+    answerId: String!
+    answerContent: String!
+    username: String!
+    createdAt: String!
+    count: Int!
   }
 
   type Auth {
@@ -38,14 +39,18 @@ const typeDefs = gql`
     user(username: String!): User
     me: User
     questions: [Question]
-    question(username: String!): User
+    question(username: String!): Question
   }
 
   type Mutation {
     createUser(username: String!, password: String!, firstName: String!, lastName: String!, email: String!): User
+    updateUser(_id: ID! username: String!, password: String!, firstName: String!, lastName: String!, email: String!): User
+    deleteUser(_id: ID!): User
     login(username: String!, password: String!): Auth
-    createQuestion(questionContent: String!): Question
-    createAnswer(answerId: String!, answerContent: String!): Answer
+    addQuestion(questionContent: String!): Question
+    addAnswer(answerId: String!, answerContent: String!): Answer
+    removeQuestion(questionId: ID!)
+    removeAnswer(questionId: ID!, answerId; ID!)
   }
   
 `;
