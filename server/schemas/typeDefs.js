@@ -43,14 +43,14 @@ const typeDefs = gql`
   }
 
   type Mutation {
-    createUser(username: String!, password: String!, firstName: String!, lastName: String!, email: String!): User
+    addUser(username: String!, password: String!, firstName: String!, lastName: String!, email: String!): User
     updateUser(_id: ID! username: String!, password: String!, firstName: String!, lastName: String!, email: String!): User
     deleteUser(_id: ID!): User
     login(username: String!, password: String!): Auth
     addQuestion(questionContent: String!): Question
-    addAnswer(answerId: String!, answerContent: String!): Answer
-    removeQuestion(questionId: ID!)
-    removeAnswer(questionId: ID!, answerId; ID!)
+    addAnswer(answerId: String!, answerContent: String!): answerSchema
+    removeQuestion(questionId: ID!): Question
+    removeAnswer(questionId: ID!, answerId: ID!): answerSchema
   }
   
 `;
