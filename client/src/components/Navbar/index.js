@@ -1,28 +1,53 @@
 import React from 'react';
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink,
+} from 'reactstrap';
 
-const Nav = ({ renderLanding, renderLogin, renderNewAnswer, renderNewProblem, renderPostedProblems, renderProfile, renderSavedProblems, renderSignup, renderSingleProblem, renderSolvedProblems }) => {
-    const tabs = ['Home', 'Search', 'Notification', 'Favorites', 'Profile', 'Saves']
 
-    return (
+class Navi extends React.Component {
+  state = {
+    isOpen: false,
+  };
 
-        <header id="flex-row">
-
-    <div>
-
-        <nav className="menu">
-          <input type="radio" name="nav-item" id="m-home" defaultChecked /><label htmlFor="m-home">Home</label>
-          <input type="radio" name="nav-item" id="m-search" /><label htmlFor="m-search">Search</label>
-          <input type="radio" name="nav-item" id="m-notification" /><label htmlFor="m-notification">Notification</label>
-          <input type="radio" name="nav-item" id="m-favorites" /><label htmlFor="m-favorites">Favorites</label>
-          <input type="radio" name="nav-item" id="m-profile" /><label htmlFor="m-profile">Profile</label>
-          <input type="radio" name="nav-item" id="m-saves" /><label htmlFor="m-profile">Profile</label>
-          <div className="selector" />
-        </nav>
-
-        {/* partial */}
-      </div>
-      </header>
-    )
+  toggle = () => {
+    this.setState({
+      isOpen: !this.state.isOpen,
+    });
   }
 
-  export default Nav;
+  render() {
+    return (
+      <div className='navi'>
+
+        <Navbar color="light" light expand="md">
+          <NavbarBrand href="/">Home</NavbarBrand>
+          <NavbarToggler onClick={this.toggle} />
+          <Collapse isOpen={this.state.isOpen} navbar>
+            <Nav className="ml-auto" navbar>
+              <NavItem>
+                <NavLink href="/components/">Search</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="/notification">Notification</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="/favorite">Favorites</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="/profile">Profile</NavLink>
+              </NavItem>
+            </Nav>
+          </Collapse>
+        </Navbar>
+      </div>
+    );
+  }
+}
+
+export default Navi;
