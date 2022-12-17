@@ -14,7 +14,7 @@ db.once('open', async () => {
 
         await User.create(userSeeds);
         await Question.create(questionsSeeds);
-        await Answer.create()
+        await Answer.create(answerSeeds);
 
 
     } catch (err) {
