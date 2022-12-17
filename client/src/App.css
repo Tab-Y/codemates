@@ -356,3 +356,9 @@ main {
   margin-left: 28cm;
 }
 /* --------------------------End of New Answer Page---------------------- */
+
+/* required for navigation to appear above elements on page */
+.navi {
+  position: relative;
+  z-index: 3;
+}
