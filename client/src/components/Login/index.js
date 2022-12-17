@@ -65,7 +65,7 @@ const Login = (props) => {
                 <div className="mb-3">
                 <input name="password" type="password" className="form-input loginInput" placeholder="Password" value={formState.password} onChange={handleChange}></input>
                 </div>
-                <button ><Link to="/Home"></Link>Login</button>
+                <button type="submit"><Link to="/Home"></Link>Login</button>
               </form>
             )}
 
