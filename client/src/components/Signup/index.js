@@ -72,7 +72,7 @@ const Signup = () => {
                         <div className="mb-3">
                         <input name="password" type="password" className="form-input loginInput" placeholder="Create a password" value={formState.password} onChange={handleChange}></input>
                         </div>
-                    <button>Create Account</button>
+                    <button type="submit">Create Account</button>
                     </form>
             )}
                    {error && (
