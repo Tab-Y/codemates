@@ -31,6 +31,13 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
+
+    updateUser: async (parent, { _id, username, password, email, firstName, lastName, karma, questions }) => {
+      const user = await User.findByIdAndUpdate( _id, { username, password, email, firstName, lastName, karma, questions }, { new: true } )
+    },
+
+    deleteUser: async (parent, { _id }) => User.findByIdAndDelete(_id),
+
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
 
@@ -48,6 +55,7 @@ const resolvers = {
 
       return { token, user };
     },
+
     addQuestion: async (parent, { questionContent }, context) => {
       if (context.user) {
         const question = await Question.create({
@@ -64,6 +72,7 @@ const resolvers = {
       }
       throw new AuthenticationError('You need to be logged in!');
     },
+
     addAnswer: async (parent, { questionId, answerContent }, context) => {
       if (context.user) {
         return Question.findOneAndUpdate(
@@ -81,6 +90,7 @@ const resolvers = {
       }
       throw new AuthenticationError('You need to be logged in!');
     },
+
     removeQuestion: async (parent, { questionId }, context) => {
       if (context.user) {
         const question = await Question.findOneAndDelete({
@@ -97,6 +107,7 @@ const resolvers = {
       }
       throw new AuthenticationError('You need to be logged in!');
     },
+    
     removeAnswer: async (parent, { questionId, answerId }, context) => {
       if (context.user) {
         return Thought.findOneAndUpdate(
