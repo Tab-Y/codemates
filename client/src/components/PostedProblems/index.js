@@ -18,14 +18,14 @@ const PostedProblems = () => {
     return (
         <div>
             <h2 style={styles.h2}>Posted Problems</h2>
-            <button type="button" class="btn btn-primary post-back-btn">Back to Profile</button>
-            <section class="solved-list">
-                <ul class="list-group">
-                    <li class="list-group-item" style={styles.list}>An item</li>
-                    <li class="list-group-item" style={styles.list}>A second item</li>
-                    <li class="list-group-item" style={styles.list}>A third item</li>
-                    <li class="list-group-item" style={styles.list}>A fourth item</li>
-                    <li class="list-group-item" style={styles.list}>And a fifth one</li>
+            <button type="button" className="btn btn-primary post-back-btn">Back to Profile</button>
+            <section className="solved-list">
+                <ul className="list-group">
+                    <li className="list-group-item" style={styles.list}>An item</li>
+                    <li className="list-group-item" style={styles.list}>A second item</li>
+                    <li className="list-group-item" style={styles.list}>A third item</li>
+                    <li className="list-group-item" style={styles.list}>A fourth item</li>
+                    <li className="list-group-item" style={styles.list}>And a fifth one</li>
                 </ul>
             </section>
         </div>

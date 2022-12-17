@@ -25,7 +25,7 @@ const About = () => {
               </div>
               <div className="carousel-inner carousel-fade">
                 <div className="carousel-item active">
-                  <img src={CPic1} class="d-block w-100" alt="CPic1"></img>
+                  <img src={CPic1} className="d-block w-100" alt="CPic1"></img>
                   <div className="carousel-caption" style={{backgroundColor: "#051923"}}>
                     <h3>Taber Youmans</h3>
                     <a style={{color: "white"}} href="https://github.com/Tab-Y"><iconify-icon icon="ri:github-fill" width="100" height="100"></iconify-icon></a>
@@ -33,7 +33,7 @@ const About = () => {
                   </div>
                 </div>
                 <div className="carousel-item">
-                  <img src={CPic2} class="d-block w-100" alt="CPic2"></img>
+                  <img src={CPic2} className="d-block w-100" alt="CPic2"></img>
                   <div className="carousel-caption" style={{backgroundColor: "#051923"}}>
                     <h3>Maria Constanza</h3>
                     <a style={{color: "white"}} href="https://github.com/MariaYConstanza"><iconify-icon icon="ri:github-fill" width="100" height="100"></iconify-icon></a>
@@ -41,16 +41,16 @@ const About = () => {
                   </div>
                 </div>
                 <div className="carousel-item">
-                  <img src={CPic3} class="d-block w-100" alt="CPic3"></img>
-                  <div class="carousel-caption" style={{backgroundColor: "#051923"}}>
+                  <img src={CPic3} className="d-block w-100" alt="CPic3"></img>
+                  <div className="carousel-caption" style={{backgroundColor: "#051923"}}>
                     <h3>Zechariah Naitram</h3>
                     <a style={{color: "white"}} href="https://github.com/Zechariahmn"><iconify-icon icon="ri:github-fill" width="100" height="100"></iconify-icon></a>
                       <a style={{color: "white"}} href="https://www.linkedin.com/in/zechariah-naitram-5179aa250/"><iconify-icon icon="mdi:linkedin" width="100" height="100"></iconify-icon></a>
                   </div>
                 </div>
-                <div class="carousel-item">
-                  <img src={CPic4} class="d-block w-100" alt="CPic4"></img>
-                  <div class="carousel-caption" style={{backgroundColor: "#051923"}}>
+                <div className="carousel-item">
+                  <img src={CPic4} className="d-block w-100" alt="CPic4"></img>
+                  <div className="carousel-caption" style={{backgroundColor: "#051923"}}>
                     <h3>Jessica Almand</h3>
                     <a style={{color: "white"}} href="https://github.com/jalmand2"><iconify-icon icon="ri:github-fill" width="100" height="100"></iconify-icon></a>
                       <a style={{color: "white"}} href="https://www.linkedin.com/in/jessicaalmand/"><iconify-icon icon="mdi:linkedin" width="100" height="100"></iconify-icon></a>

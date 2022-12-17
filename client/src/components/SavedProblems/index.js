@@ -18,12 +18,12 @@ const SavedProblems = () => {
     return (
         <div>
             <h2 style={styles.h2}>Saved Problems</h2>
-            <ul class="list-group problem-list">
-                <li class="list-group-item" style={styles.list}>An item</li>
-                <li class="list-group-item" style={styles.list}>A second item</li>
-                <li class="list-group-item" style={styles.list}>A third item</li>
-                <li class="list-group-item" style={styles.list}>A fourth item</li>
-                <li class="list-group-item" style={styles.list}>And a fifth one</li>
+            <ul className="list-group problem-list">
+                <li className="list-group-item" style={styles.list}>An item</li>
+                <li className="list-group-item" style={styles.list}>A second item</li>
+                <li className="list-group-item" style={styles.list}>A third item</li>
+                <li className="list-group-item" style={styles.list}>A fourth item</li>
+                <li className="list-group-item" style={styles.list}>And a fifth one</li>
             </ul>
         </div>
     );

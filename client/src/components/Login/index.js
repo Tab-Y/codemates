@@ -42,15 +42,15 @@ const Login = (props) => {
   };
   return (
     <div>
-      <div class="split left">
-        <div class="centered">
+      <div className="split left">
+        <div className="centered">
           <img src={Logo} alt="Logo"></img>
         </div>
       </div>
 
-      <div class="split right">
-        <div class="centered">
-          <h3 class="loginHeading">Login</h3>
+      <div className="split right">
+        <div className="centered">
+          <h3 className="loginHeading">Login</h3>
           <div >
             {data ? (
               <p>
@@ -59,10 +59,10 @@ const Login = (props) => {
               </p>
             ) : (
               <form onSubmit={handleFormSubmit}>
-                <div class="mb-3">
+                <div className="mb-3">
                 <input name="email" type="email" className="form-input loginInput" placeholder="Email address" value={formState.email} onChange={handleChange}></input>
                 </div>
-                <div class="mb-3">
+                <div className="mb-3">
                 <input name="password" type="password" className="form-input loginInput" placeholder="Password" value={formState.password} onChange={handleChange}></input>
                 </div>
                 <button ><Link to="/Home"></Link>Login</button>
