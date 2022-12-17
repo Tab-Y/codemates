@@ -48,7 +48,7 @@ const Signup = () => {
             </div>
 
             <div className="split right">
-                <div class="centered">
+                <div className="centered">
                     <h3 className="loginHeading">Create Account</h3>
                     {data ? (
               <p>
@@ -60,16 +60,16 @@ const Signup = () => {
                 <div className="mb-3">
                         <input name="firstName" type="firstName" className="form-input loginInput" placeholder="Enter your first name" value={formState.firstName} onChange={handleChange}></input>
                         </div>
-                        <div class="mb-3">
+                        <div className="mb-3">
                         <input name="lastName" type="lastName" className="form-input loginInput" placeholder="Enter your last name" value={formState.lastName} onChange={handleChange}></input>
                         </div>
-                <div class="mb-3">
+                <div className="mb-3">
                         <input name="username" type="username" className="form-input loginInput" placeholder="Create a username" value={formState.name} onChange={handleChange}></input>
                         </div>
-                        <div class="mb-3">
+                        <div className="mb-3">
                         <input name="email" type="email" className="form-input loginInput" placeholder="Enter your email" value={formState.email} onChange={handleChange}></input>
                         </div>
-                        <div class="mb-3">
+                        <div className="mb-3">
                         <input name="password" type="password" className="form-input loginInput" placeholder="Create a password" value={formState.password} onChange={handleChange}></input>
                         </div>
                     <button>Create Account</button>
