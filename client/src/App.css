@@ -52,6 +52,8 @@
 --med-high: #006494;
 --dark-high: #003554;
 --roy-back: #051923;
+/* Font style */
+--comf: 'Comfortaa', cursive;
 }
 /* --------------Landing Page CSS--------------------- */
 /* Split the screen in half */
@@ -155,7 +157,9 @@ main {
 /* ---------------------End of About CSS--------------------------- */
   
 /* ---------------Solved Problems Page------------ */
-.btn {
+.solve-back-btn {
+  font-family: var(--comf);
+  font-family: var(--comf);
   background-color: #006494;
   color: white;
   border-color: #006494;
@@ -163,14 +167,17 @@ main {
   margin-top: -2cm;
 }
 .solved-list {
+  font-family: var(--comf);
   width: 75rem;
   margin-left: 10cm;
-  margin-top: 0.1cm
+  margin-top: 0.1cm;
+  overflow: hidden;
 }
 /* ----------------End of Solved Problem Page------------ */
 
 /* ----------------Posted Problems Page----------------- */
-.btn {
+.post-back-btn {
+  font-family: var(--comf);
   background-color: #006494;
   color: white;
   border-color: #006494;
@@ -178,19 +185,23 @@ main {
   margin-top: -2cm;
 }
 .solved-list {
+  font-family: var(--comf);
   width: 75rem;
   margin-left: 10cm;
-  margin-top: 0.1cm
+  margin-top: 0.1cm;
+  overflow: hidden;
 }
 /* --------------End of Posted Problem Page-------------- */
 
 /* ---------------------Profile Page--------------------- */
 .username {
+  font-family: var(--comf);
   color: var(--lit-high);
   margin-left: 8cm;
   margin-top: 2cm;
 }
 .bank-point {
+  font-family: var(--comf);
   width: 18rem;
   margin-left: 2cm;
   margin-top: 6cm;
@@ -198,52 +209,69 @@ main {
   color: var(--roy-back);
 }
 .card-header {
+  color: var(--lit-high);
   text-align: center;
 }
 .post {
+  font-family: var(--comf);
   margin-left: 15cm;
   margin-top: -8cm;
 }
 .solve {
+  font-family: var(--comf);
   margin-left: 15cm;
   margin-top: 1cm;
+}
+.post-link, .solve-link {
+  font-family: var(--comf);
+  margin-left: 40cm;
+  color: var(--dark-acc);
 }
 /* ----------------End of the Profile Page-------------- */
 
 /* ------------------Create Answer Page------------------- */
 .answer {
-margin-left: 9cm;
-margin-top: 8cm;
+  font-family: var(--comf);
+  margin-left: 9cm;
+  margin-top: 8cm;
 }
 .answer-card {
-  width: 30rem;
+  font-family: var(--comf);
+  height:20rem;
   margin-left: 9cm;
 }
 .solve-btn{
+  font-family: var(--comf);
   background-color: #006494;
   border-color: #006494;
   margin-left: 12cm;
   margin-top: 0.5cm;
 }
 .reply-btn {
+  font-family: var(--comf);
   background-color: #006494;
   border-color: #006494;
   margin-left: 1cm;
   margin-top: 0.5cm;
 }
 .other {
-margin-left: 28cm;
-margin-top: -6.5cm;
+  font-family: var(--comf);
+  margin-left: 28cm;
+  margin-top: -10.5cm;
 }
 .other-list {
+  font-family: var(--comf);
   width: 40rem;
   margin-left: 28cm;
+  overflow: hidden;
 }
 .card-body {
+  font-family: var(--comf);
   background-color: var(--lit-high);
   color: var(--roy-back);
 }
 .create-btn {
+  font-family: var(--comf);
   background-color: #006494;
   border-color: #006494;
   margin-left: 9cm;
@@ -253,64 +281,78 @@ margin-top: -6.5cm;
 
 /* ------------------New Problem Page----------------------- */
 .create-card {
+  font-family: var(--comf);
+  width: 30rem;
+  height: 25rem;
   margin-left: 20cm;
 }
 .crt-problem {
+  font-family: var(--comf);
   background-color: #006494;
   border-color: #006494;
-  margin-left: 22cm;
+  margin-left: 24.5cm;
 }
 /* -------------------End of New Problem Page---------------- */
 
 /* ----------------------Saved Problem Page-------------------- */
 .problem-list {
-    width: 70rem;
-    margin-left: 10cm;
+  font-family: var(--comf);
+  width: 70rem;
+  margin-left: 10cm;
 }
 /* ----------------------------End of Saved Problem Page------------- */
 
 /* -----------------------------Single Problem Page---------------------- */
 .single {
+  font-family: var(--comf);
   margin-left: 5cm;
   margin-top: 8cm;
 }
 .single-box {
+  font-family: var(--comf);
   margin-left: 4.7cm;
   height: 20rem;
 }
 .answers {
+  font-family: var(--comf);
   margin-left: 24cm;
   margin-top: -9cm;
 }
 .answer-box {
+  font-family: var(--comf);
   width: 50rem;
   margin-left: 24cm;
 }
 /* -----------------------------End of Single Problem Page---------------------- */
 
-/* -------------------------Create Answer Page------------------------ */
+/* ------------------------- New Answer Page------------------------ */
 .new {
+  font-family: var(--comf);
   margin-top: 8cm;
   margin-left: 8cm;
 }
 .create-box {
+  font-family: var(--comf);
   width: 25rem;
   height: 20rem;
   margin-left: 8cm;
 }
 .post-btn {
+  font-family: var(--comf);
   background-color:#006494;
   border-color: #006494;
   margin-left: 8cm;
   margin-top: 0.5cm;
 }
 .current {
+  font-family: var(--comf);
   margin-left: 28cm;
   margin-top: -11.2cm;
 }
 .current-box {
+  font-family: var(--comf);
   width: 25rem;
   height: 20rem;
   margin-left: 28cm;
 }
-/* --------------------------End of Answer Page---------------------- */
+/* --------------------------End of New Answer Page---------------------- */

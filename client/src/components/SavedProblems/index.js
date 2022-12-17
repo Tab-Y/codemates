@@ -5,6 +5,7 @@ const styles = {
         color: '#c4fff9',
         marginLeft: '8cm',
         marginTop: '8cm',
+        fontFamily: 'Comfortaa',
     },
     list: {
         backgroundColor: '#c4fff9',

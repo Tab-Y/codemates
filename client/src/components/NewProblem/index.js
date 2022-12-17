@@ -9,7 +9,7 @@ const styles= {
   body: {
     background: '#c4fff9',
     borderColor: '#07beb8',
-    maxWidth: '18rem',
+    fontFamily: 'Comfortaa',
   },
   text: {
     color: '#051923',
