@@ -10,29 +10,34 @@ const userSchema = new Schema({
         unique: true,
         trim: true,
     },
+
     password: {
         type: String,
         required: true,
         minlength: 5,
     },
+
     email: {
         type: String,
         required: true,
         unique: true,
         match: [/.+@.+\..+/, 'Must match an email address!'],
     },
+
     firstName: {
         type: String,
         required: true,
         unique: true,
         trim: true,
     },
+    
     lastName: {
         type: String,
         required: true,
         unique: true,
         trim: true,
     },
+
     questions: [ Question.schema ],
 //     questions: [
 //         {
@@ -50,6 +55,7 @@ const userSchema = new Schema({
     karma: {
         type: Number,
     }
+    
 });
 
 userSchema.pre('save', async function (next) {
