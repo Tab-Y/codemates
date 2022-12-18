@@ -24,9 +24,13 @@ const questionSchema = new Schema(
                 {
                     type: Schema.Types.ObjectId,
                     ref: 'Answer',
+                   
+                    // maybe we need to add boolean here to determine if this answer is the solution
+                    // so something like "isSolution: { type: Boolean, default: false }
+                    // found this example to update it as true like this: "MyModel.update({},{"$set":{"isSolution":false}}"
                 },
             ],
-        },
+        },      
     },
     {                               // as shown in assignment 26
         toJSON: {
