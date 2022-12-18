@@ -39,6 +39,18 @@ const userSchema = new Schema({
     },
 
     questions: [ Question.schema ],
+//     questions: [
+//         {
+//             type: Schema.Types.ObjectId,
+//             ref: 'Question'
+//         }
+//     ]
+// },
+// {
+//     toJSON: {
+//         virtuals: true,
+//     },
+// }
     answers: [ Answer.schema ],
     karma: {
         type: Number,
