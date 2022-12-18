@@ -33,7 +33,7 @@ const resolvers = {
     },
 
     updateUser: async (parent, { _id, username, password, email, firstName, lastName, karma, questions }) => {
-      const user = await User.findByIdAndUpdate( _id, { username, password, email, firstName, lastName, karma, questions }, { new: true } )
+      const user = await User.findByIdAndUpdate(_id, { username, password, email, firstName, lastName, karma, questions }, { new: true })
     },
 
     deleteUser: async (parent, { _id }) => User.findByIdAndDelete(_id),
@@ -107,7 +107,7 @@ const resolvers = {
       }
       throw new AuthenticationError('You need to be logged in!');
     },
-    
+
     removeAnswer: async (parent, { questionId, answerId }, context) => {
       if (context.user) {
         return Thought.findOneAndUpdate(

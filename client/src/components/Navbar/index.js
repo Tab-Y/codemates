@@ -39,23 +39,33 @@ class Navi extends React.Component {
         <Navbar color="light" light expand="md">
 
           <NavbarBrand href="/">CodeMates</NavbarBrand>
+
           <NavbarToggler onClick={this.toggle} />
+
           <Collapse isOpen={this.state.isOpen} navbar>
+
             <Nav className="ml-auto" navbar>
+
               <NavItem>
                 <NavLink href="/components/">Search</NavLink>
               </NavItem>
+
               <NavItem>
                 <NavLink href="/notification">Notification</NavLink>
               </NavItem>
+
               <NavItem>
                 <NavLink href="/favorite">Favorites</NavLink>
               </NavItem>
+
               <NavItem>
+
                 <Dropdown isOpen={this.state.isOpen} onClick={this.toggle}>
+
                   <DropdownToggle caret>
                     Profile
                   </DropdownToggle>
+
                   <DropdownMenu>
                     <DropdownItem header>Profile</DropdownItem>
                     <DropdownItem href="/profile">View</DropdownItem>
@@ -63,11 +73,17 @@ class Navi extends React.Component {
                     <DropdownItem divider />
                     <DropdownItem href='/logout'>Logout</DropdownItem>
                   </DropdownMenu>
+
                 </Dropdown>
+
               </NavItem>
+
             </Nav>
+
           </Collapse>
+
         </Navbar>
+
       </div>
     );
   }

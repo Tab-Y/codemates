@@ -16,10 +16,15 @@ const styles = {
 const SolvedProblems = () => {
 
     return (
+
         <div>
+
             <h2 style={styles.h2}>Solved Problems</h2>
+
             <button type="button" className="btn btn-primary solve-back-btn">Back to Profile</button>
+
             <section className="solved-list">
+
                 <ul className="list-group">
                     <li className="list-group-item" style={styles.list}>An item</li>
                     <li className="list-group-item" style={styles.list}>A second item</li>
@@ -27,7 +32,9 @@ const SolvedProblems = () => {
                     <li className="list-group-item" style={styles.list}>A fourth item</li>
                     <li className="list-group-item" style={styles.list}>And a fifth one</li>
                 </ul>
+
             </section>
+
         </div>
     );
 };

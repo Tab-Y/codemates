@@ -30,7 +30,8 @@ const Login = (props) => {
       });
 
       Auth.login(data.login.token);
-    } catch (e) {
+    }
+    catch (e) {
       console.error(e);
     }
 
@@ -40,44 +41,60 @@ const Login = (props) => {
       password: '',
     });
   };
+
   return (
+
     <div>
+
       <div className="split left">
+
         <div className="centered">
           <img src={Logo} alt="Logo"></img>
         </div>
+
       </div>
 
       <div className="split right">
+
         <div className="centered">
+
           <h3 className="loginHeading">Login</h3>
+
           <div >
+
             {data ? (
               <p>
                 Success! You may now head{' '}
                 <Link to="/Home">back to the homepage.</Link>
               </p>
-            ) : (
-              <form onSubmit={handleFormSubmit}>
-                <div className="mb-3">
-                <input name="email" type="email" className="form-input loginInput" placeholder="Email address" value={formState.email} onChange={handleChange}></input>
-                </div>
-                <div className="mb-3">
-                <input name="password" type="password" className="form-input loginInput" placeholder="Password" value={formState.password} onChange={handleChange}></input>
-                </div>
-                <button type="submit"><Link to="/Home"></Link>Login</button>
-              </form>
-            )}
+            ) :
+
+              (
+                <form onSubmit={handleFormSubmit}>
+                  <div className="mb-3">
+                    <input name="email" type="email" className="form-input loginInput" placeholder="Email address" value={formState.email} onChange={handleChange}></input>
+                  </div>
+                  <div className="mb-3">
+                    <input name="password" type="password" className="form-input loginInput" placeholder="Password" value={formState.password} onChange={handleChange}></input>
+                  </div>
+                  <button type="submit"><Link to="/Home"></Link>Login</button>
+                </form>
+              )}
 
             {error && (
               <div className="my-3 p-3 bg-danger text-white">
                 {error.message}
               </div>
             )}
+
             <p>Need to create an account? <Link to="/signup">Create account</Link></p>
+
           </div>
+
         </div>
+
       </div>
+
     </div>
   );
 };

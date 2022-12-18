@@ -10,30 +10,38 @@ const questionSchema = new Schema(
             minlength: 5,
             maxlength: 280,
         },
+
         createdAt: {
             type: Date,
             default: Date.now,
             get: (timestamp) => dateFormat(timestamp),
         },
+
         username: {
             type: String,
             required: true,
         },
+
         answers: {
             type: [
                 {
                     type: Schema.Types.ObjectId,
                     ref: 'Answer',
                 },
+                
             ],
+
         },
+
     },
+
     {                               // as shown in assignment 26
         toJSON: {
             virtuals: true,
         },
         id: false,
     },
+    
 )
 
 questionSchema.virtual('answerCount').get(() => {

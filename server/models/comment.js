@@ -42,6 +42,7 @@ comment.init({
         }
     }
 },
+
 {
     sequelize,
     freezeTableName: true,

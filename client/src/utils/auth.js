@@ -17,7 +17,8 @@ class AuthService {
       if (decoded.exp < Date.now() / 1000) {
         return true;
       } else return false;
-    } catch (err) {
+    }
+    catch (err) {
       return false;
     }
   }
