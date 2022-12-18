@@ -2,7 +2,8 @@ const db = require('../config/connection');
 const { Answer, Question, User } = require('../models');
 const userSeeds = require('./userSeed.json');
 const questionsSeeds = require('./questionSeed.json');
-const answerSeeds = require('./answerSeeds.json')
+const answerSeeds = require('./answerSeed.json');
+
 
 db.once('open', async () => {
     try {
@@ -10,9 +11,10 @@ db.once('open', async () => {
         await Question.deleteMany({});
         await Answer.deleteMany({});
 
+
         await User.create(userSeeds);
-        await Question.bulkCreate(questionsSeeds);
-        await Answer.bulkCreate(answerSeeds)
+        await Question.create(questionsSeeds);
+        await Answer.create(answerSeeds);
 
 
     } catch (err) {

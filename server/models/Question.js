@@ -1,5 +1,5 @@
-const { Schema, model } = require('mongoose');
-const { answerSchema } = require('./Answer');
+const { Schema, model, Types } = require('mongoose');
+// const { answerSchema } = require('./Answer');
 const dateFormat = require('../utils/dateFormat');
 
 const questionSchema = new Schema(
@@ -20,7 +20,12 @@ const questionSchema = new Schema(
             required: true,
         },
         answers: {
-            type: [answerSchema],
+            type: [
+                {
+                    type: Schema.Types.ObjectId,
+                    ref: 'Answer',
+                },
+            ],
         },
     },
     {                               // as shown in assignment 26
@@ -31,7 +36,7 @@ const questionSchema = new Schema(
     },
 )
 
-questionSchema.virtual('answerCount').get( () => {
+questionSchema.virtual('answerCount').get(() => {
     return this.answers.length;
 });
 

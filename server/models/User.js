@@ -1,5 +1,7 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
+const Answer = require('./Answer');
+const Question = require('./Question');
 
 const userSchema = new Schema({
     username: {
@@ -31,15 +33,11 @@ const userSchema = new Schema({
         unique: true,
         trim: true,
     },
+    questions: [ Question.schema ],
+    answers: [ Answer.schema ],
     karma: {
         type: Number,
-    },
-    questions: [
-        {
-            type: Schema.Types.ObjectId,
-            ref: 'Question',
-        }
-    ]
+    }
 });
 
 userSchema.pre('save', async function (next) {
@@ -52,7 +50,7 @@ userSchema.pre('save', async function (next) {
 });
 
 userSchema.methods.isCorrectPassword = async function (password) {
-    return bcrypt.compare(password, this.password);
+    return await bcrypt.compare(password, this.password);
 };
 
 const User = model('User', userSchema);

@@ -5,8 +5,6 @@
         "email": "testemail@email.com",
         "firstName": "Test",
         "lastName": "Testington",
-        "questions": [],
-        "answers": [],
         "karma": 20
     },
     {
@@ -15,8 +13,6 @@
         "email": "gordan@blackmesa.com",
         "firstName": "Gordan",
         "lastName": "Freeman",
-        "questions": [],
-        "answers": [],
         "karma": 5
     },
     {
@@ -25,8 +21,6 @@
         "email": "siRgideon@mail.co",
         "firstName": "Gideon",
         "lastName": "Graves",
-        "questions": [],
-        "answers": [],
         "karma": 15
     },
     {
@@ -35,8 +29,6 @@
         "email": "quiz@gmail.com",
         "firstName": "Quiz",
         "lastName": "Master",
-        "questions": [],
-        "answers": [],
         "karma": 25
     },
     {
@@ -45,8 +37,6 @@
         "email": "kingArthur@mail.co",
         "firstName": "Arthur",
         "lastName": "Pendragon",
-        "questions": [],
-        "answers": [],
         "karma": 15
     },
     {
@@ -55,8 +45,6 @@
         "email": "tester@mail.co",
         "firstName": "tester",
         "lastName": "tester",
-        "questions": [],
-        "answers": [],
         "karma": 20
     }
 ]

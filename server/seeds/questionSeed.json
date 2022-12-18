@@ -1,46 +1,22 @@
 [
     {
         "questionContent": "this is a test",
-        "username": "tester",
-        "answers": [
-            {
-                "answerContent": "what a nice test this is",
-                "username": "kingArthur"
-            }
-        ]
+        "username": "tester"
     },
     {
         "questionContent": "What is average airspeed velocity of an unladen swallow?",
-        "username": "quizmaster",
-        "answers": [
-            {
-                "answerContent": "It depends if it is an African or European swallow",
-                "username": "kingArthur"
-            },
-            {
-                "answerContent": "I dont't know that!",
-                "username": "quizmaster"
-            }
-        ]
+        "username": "quizmaster"
     },
     {
         "questionContent": "Can this work?",
-        "username": "siRgideon",
-        "answers": [
-            {
-                "answerContent": "it already works",
-                "username": "kingArthur"
-            }
-        ]
+        "username": "siRgideon"
     },
     {
         "questionContent": "Test built for ages",
-        "username": "tester",
-        "answers": []
+        "username": "tester"
     },
     {
         "questionContent": "this is another test",
-        "username": "tester",
-        "answers": []
+        "username": "tester"
     }
 ]
