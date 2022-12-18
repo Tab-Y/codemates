@@ -1,9 +1,9 @@
 import React from 'react';
+
 import {
   Collapse,
   Navbar,
   NavbarToggler,
-  NavbarBrand,
   Nav,
   NavItem,
   NavLink,
@@ -26,10 +26,13 @@ class Navi extends React.Component {
       <div className='navi'>
 
         <Navbar color="light" light expand="md">
-          <NavbarBrand href="/">Home</NavbarBrand>
+          
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
+            <NavItem>
+                <NavLink href="/Home">Home</NavLink>
+              </NavItem>
               <NavItem>
                 <NavLink href="/components/">Search</NavLink>
               </NavItem>
@@ -42,6 +45,7 @@ class Navi extends React.Component {
               <NavItem>
                 <NavLink href="/profile">Profile</NavLink>
               </NavItem>
+              <div className='selector'></div>
             </Nav>
           </Collapse>
         </Navbar>
