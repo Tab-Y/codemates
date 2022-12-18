@@ -51,3 +51,18 @@ export const ADD_QUESTION = gql`
   }
 `;
 
+export const ADD_COMMENT = gql`
+  mutation addComment($answerId: ID!, $commentContent: String!) {
+    addComment(answerId: $answerId, commentContent: $commentContent) {
+      _id
+      questionContent
+      username
+      createdAt
+      comments {
+        _id
+        commentContent
+        createdAt
+      }
+    }
+  }
+`;
