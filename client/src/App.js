@@ -56,7 +56,7 @@ const client = new ApolloClient({
 
 function App() {
 
-  //Set state default to Home
+  // Set state default to Home
   // const [currentPage, handlePageChange] = useState("landing");
 
   // useState functions for button/ nav onClick()
