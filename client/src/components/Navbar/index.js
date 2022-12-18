@@ -61,23 +61,15 @@ class Navi extends React.Component {
               </NavItem>
 
               <NavItem>
+                <NavLink href="/profile">Profile</NavLink>
+              </NavItem>
 
-                <Dropdown isOpen={this.state.isOpen} onClick={this.toggle}>
+              <NavItem>
+                <NavLink href="/newproblem">New Problem</NavLink>
+              </NavItem>
 
-                  <DropdownToggle caret>
-                    Profile
-                  </DropdownToggle>
-
-                  <DropdownMenu>
-                    <DropdownItem header>Profile</DropdownItem>
-                    <DropdownItem href="/profile">View</DropdownItem>
-                    <DropdownItem href="/newproblem">New Problem</DropdownItem>
-                    <DropdownItem divider />
-                    <DropdownItem href='/logout'>Logout</DropdownItem>
-                  </DropdownMenu>
-
-                </Dropdown>
-
+              <NavItem>
+                <NavLink href="/Logout">Logout</NavLink>
               </NavItem>
 
             </Nav>
