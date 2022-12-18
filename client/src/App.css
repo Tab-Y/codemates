@@ -42,6 +42,7 @@
 /* CSS Color Root */
 :root {
   /* Light mode  */
+
   --lit-high: #c4fff9;
   --med-high: #9ceaef;
   --med-acc: #3dccc7;
@@ -55,6 +56,23 @@
   --roy-back: #051923;
   /* Font style */
   --comf: 'Comfortaa', cursive;
+
+--lit-high: #c4fff9;
+--med-high: #9ceaef;
+--med-acc: #3dccc7;
+--dark-acc: #07beb8;
+--tur-back: #68d8d6;
+/* Dark mode */
+--lit-acc: #00a6fb;
+--med-acc: #0582ca;
+--med-high: #006494;
+--dark-high: #003554;
+--roy-back: #051923;
+/* Font style */
+--comf: 'Comfortaa', cursive;
+/*---------icon root--------*/
+--icon: #b0bfd8;
+
 }
 
 /* --------------Landing Page CSS--------------------- */
@@ -401,6 +419,75 @@ main {
 
 /* required for navigation to appear above elements on page */
 .navi {
+  display: flex;
   position: relative;
   z-index: 3;
+  justify-content: center;
+}
+
+/*-------------Navabr----------------*/
+ul.ml-auto.navbar-nav{
+margin-top:0;
+padding:0;
+
+height:5vh;
+background:rgb(196, 255, 249);
+}
+
+ul{
+margin:0;
+padding:0;
+display:flex;
+}
+
+ul li{
+list-style:none;
+margin:0 20px;
+transition:0.5s;
+}
+
+ul li a{
+display: block;
+position:relative;
+text-decoration:none;
+padding:5px;
+font-size:18px;
+font-family: sans-serif;
+color:rgb(248, 245, 245);
+text-transform:uppercase;
+transition:0.5s;
+}
+
+ul:hover li a{
+transform:scale(1.5);
+opacity:0.2;
+filter:blur(5px);
+}
+
+ul li a:hover{
+transform:scale(2);
+opacity:1;
+filter:blur(0);
+text-decoration:none;
+color:rgb(252, 248, 248);
+}
+
+ul li a:before{
+content:'';
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgb(196, 255, 249);
+transition:0.5s;
+transform-origin:right;
+transform:scaleX(0);
+z-index:-1;
+}
+
+ul li a:hover:before{
+transition:transform 0.5s;
+transform-origin:left;
+transform:scaleX(1);
 }

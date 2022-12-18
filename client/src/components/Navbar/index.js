@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react'
 import {
   Collapse,
   Navbar,
   NavbarToggler,
-  NavbarBrand,
   Nav,
   NavItem,
   NavLink,
@@ -38,13 +37,16 @@ class Navi extends React.Component {
 
         <Navbar color="light" light expand="md">
 
-          <NavbarBrand href="/">CodeMates</NavbarBrand>
 
           <NavbarToggler onClick={this.toggle} />
 
           <Collapse isOpen={this.state.isOpen} navbar>
 
             <Nav className="ml-auto" navbar>
+
+            <NavItem>
+                <NavLink href="/Home">Home</NavLink>
+              </NavItem>
 
               <NavItem>
                 <NavLink href="/components/">Search</NavLink>
