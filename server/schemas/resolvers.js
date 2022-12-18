@@ -127,5 +127,6 @@ const resolvers = {
     },
   }
 };
-
+// may need to figure out how to update an answer as the solution and a question as solved, 
+//in turn transferring the karma points to the user who correctly solved the problem
 module.exports = resolvers;
