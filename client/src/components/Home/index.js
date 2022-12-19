@@ -58,9 +58,9 @@ const Home = () => {
 
               <ul className="list-group list-group-flush">
                 <li className="list-group-item" style={{ backgroundColor: "#c4fff9" }}>Why can't I change the text color of an a tag?</li>
-                <li className="list-group-item" style={{ backgroundColor: "#c4fff9" }}>Oldest</li>
-                <li className="list-group-item" style={{ backgroundColor: "#c4fff9" }}>Unanswered</li>
-                <li className="list-group-item" style={{ backgroundColor: "#c4fff9" }}>Paid</li>
+                <li className="list-group-item" style={{ backgroundColor: "#c4fff9" }}>Why won't my bootstrap CSS load onto the page?</li>
+                <li className="list-group-item" style={{ backgroundColor: "#c4fff9" }}>I keep getting a 404 error when I try to login.</li>
+                <li className="list-group-item" style={{ backgroundColor: "#c4fff9" }}>Help.</li>
               </ul>
 
             </div>
