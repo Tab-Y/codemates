@@ -5,11 +5,7 @@ import {
   NavbarToggler,
   Nav,
   NavItem,
-  NavLink,
-  Dropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem
+  NavLink
 } from 'reactstrap';
 
 // const [dropdownOpen, setDropdownOpen] = useState(false);
