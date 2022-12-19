@@ -29,10 +29,11 @@ Please visit the deployed application at https://codemates-app.herokuapp.com/
 
 This is a continual work in progress
 
+
+![Screenshot of landing page](./assets/img/p3-screenshot.png) 
 In order for users to use this application they must first clone down the repo so that they have the necessary dependencies for the application function properly. After the users have cloned down the repo they can then run the ```npm install``` command in the terminal to install the dependencies, devdependencies and engines needed for the application to function. Once everyhting has been installed and the users has their own ```package-lock.json``` and ```node_module``` folders they can then run the command ```npx create-react-app my-app``` inside the terminal in order to run the react portion of the application. The users can then run the ```npm run build``` comannd to create an aptimized compiled build of the application then run the ```npm run develop``` command to start up the application. Once the application is started the users will be taken to the home page of the application where they can either signup and make an account or login if an account was already made. After the user has signed-in or made an account they can then use the navbar to navigate to the different pages of the application depending on what their need are for using the application. Users will be allowed to either post their programming problems on the application and ask other users to help solve the issue in exchange for karma points or other monetary value by using the ```New Problem page```. Users can save posts that they find helpful and store them into their own ```Favorites page```. If the user has posted a new problem and another user has provided a solution then a notification should be recieved by the user that posted the problem in their ```Notifications page```. Users will be able to search for certain topics that they might need in that point in time for help on their own issues using the ```search page```. Lastly users can view their own personal page with their information using the ```Profile page```.
 
 
-![Screenshot of landing page](./assets/img/p3-screenshot.png) 
 
 ## Credits / Contributors 
 

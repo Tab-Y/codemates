@@ -28,7 +28,7 @@ const NewAnswer = () => {
 
                 </div>
 
-                <a href="#" className="btn btn-primary post-btn">Post Answer</a>
+                <a href="/" className="btn btn-primary post-btn">Post Answer</a>
 
             </section>
 

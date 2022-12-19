@@ -1,60 +1,45 @@
-import { gql } from '@apollo/client';
+import { gql } from "@apollo/client";
 
 export const QUERY_USER = gql`
-  query user($username: String!) {
-    user(username: $username) {
+query user($userId: ID!) {
+  user(userId: $userId) {
+    _id
+    username
+    email
+    courseCount
+    courses {
       _id
-      username
-      email
-      questions {
-        _id
-        questionContent
-        createdAt
-      }
+      courseName
+      startDate
+      endDate
+      description
+      instructor
     }
   }
+}
 `;
 
-export const QUERY_QUESTIONS = gql`
-  query getQuestions {
-    questions {
+export const QUERY_COURSE = gql`
+  query course($courseId: ID!) {
+  course(courseId: $courseId) {
+    _id
+    courseName
+    startDate
+    endDate
+    description
+    instructor
+    students {
       _id
-      questionContent
-      username
-      createdAt
-    }
-  }
-`;
-
-export const QUERY_SINGLE_QUESTION = gql`
-  query getSingleQuestion($questionId: ID!) {
-    question(questionId: $questionId) {
-      _id
-      questionContet
-      username
-      createdAt
-      answers {
+      firstName
+      lastName
+      course
+      grades {
         _id
-        answerContent
-        username
-        createdAt
+        assignmentName
+        grade
       }
     }
+    studentCount
   }
-`;
-
-export const QUERY_ME = gql`
-  query me {
-    me {
-      _id
-      username
-      email
-      questions {
-        _id
-        questionContent
-        username
-        createdAt
-      }
-    }
-  }
+}
 `;

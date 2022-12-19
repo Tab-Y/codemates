@@ -1,132 +1,47 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User, Question } = require('../models');
+const { User } = require('../models');
 const { signToken } = require('../utils/auth');
-const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
 
 const resolvers = {
   Query: {
-    users: async () => {
-      return User.find().populate('questions');
-    },
-    user: async (parent, { username }) => {
-      return User.findOne({ username }).populate('questions');
-    },
-    me: async (parent, args, context) => {
+    /// GETS ONE USER ///
+    user: async (parent, { userId }, context) => {
       if (context.user) {
-        return User.findOne({ _id: context.user._id }).populate('questions');
+        const userData = await (await User.findOne({ _id: userId }).select('-__v -password'));
+
+        return userData;
       }
-      throw new AuthenticationError('You need to be logged in!');
-    },
-    questions: async (parent, { username }) => {
-      const params = username ? { username } : {};
-      return Question.find(params).sort({ createdAt: -1 });
-    },
-    questions: async (parent, { questionId }) => {
-      return Question.findOne({ _id: questionId });
+
+      throw new AuthenticationError('Not logged in');
     },
   },
+
   Mutation: {
-    addUser: async (parent, { username, password, email, firstName, lastName, karma, questions }) => {
-      const user = await User.create({ username, password, email, firstName, lastName, karma, questions });
+    /// ADD USER ///
+    addUser: async (parent, args) => {
+      const user = await User.create(args);
       const token = signToken(user);
+
       return { token, user };
     },
-
-    updateUser: async (parent, { _id, username, password, email, firstName, lastName, karma, questions }) => {
-      const user = await User.findByIdAndUpdate(_id, { username, password, email, firstName, lastName, karma, questions }, { new: true })
-    },
-
-    deleteUser: async (parent, { _id }) => User.findByIdAndDelete(_id),
-
+    /// LOGIN ///
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
 
       if (!user) {
-        throw new AuthenticationError('No user found with this email address');
+        throw new AuthenticationError('Incorrect Credentials');
       }
 
-      const correctPw = await user.isCorrectPassword(password);
+      const correctPassword = await user.isCorrectPassword(password);
 
-      if (!correctPw) {
-        throw new AuthenticationError('Incorrect credentials');
+      if (!correctPassword) {
+        throw new AuthenticationError('Incorrect Credentials');
       }
 
       const token = signToken(user);
-
       return { token, user };
-    },
-
-    addQuestion: async (parent, { questionContent }, context) => {
-      if (context.user) {
-        const question = await Question.create({
-          questionContent,
-          username: context.user.username,
-        });
-
-        await User.findOneAndUpdate(
-          { _id: context.user._id },
-          { $addToSet: { questions: question._id } }
-        );
-
-        return question;
-      }
-      throw new AuthenticationError('You need to be logged in!');
-    },
-
-    addAnswer: async (parent, { questionId, answerContent }, context) => {
-      if (context.user) {
-        return Question.findOneAndUpdate(
-          { _id: questionId },
-          {
-            $addToSet: {
-              answers: { answerContent, username: context.user.username },
-            },
-          },
-          {
-            new: true,
-            runValidators: true,
-          }
-        );
-      }
-      throw new AuthenticationError('You need to be logged in!');
-    },
-
-    removeQuestion: async (parent, { questionId }, context) => {
-      if (context.user) {
-        const question = await Question.findOneAndDelete({
-          _id: questionId,
-          username: context.user.username,
-        });
-
-        await User.findOneAndUpdate(
-          { _id: context.user._id },
-          { $pull: { questions: thought._id } }
-        );
-
-        return question;
-      }
-      throw new AuthenticationError('You need to be logged in!');
-    },
-
-    removeAnswer: async (parent, { questionId, answerId }, context) => {
-      if (context.user) {
-        return Thought.findOneAndUpdate(
-          { _id: questionId },
-          {
-            $pull: {
-              comments: {
-                _id: answerId,
-                username: context.user.username,
-              },
-            },
-          },
-          { new: true }
-        );
-      }
-      throw new AuthenticationError('You need to be logged in!');
     },
   }
 };
-// may need to figure out how to update an answer as the solution and a question as solved, 
-//in turn transferring the karma points to the user who correctly solved the problem
+
 module.exports = resolvers;

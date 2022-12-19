@@ -78,8 +78,6 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
 
-        <React.Fragment>
-
           <div>
 
             <main>
@@ -155,8 +153,6 @@ function App() {
           </div>
 
           <footer>Thanks for visiting!</footer>
-
-        </React.Fragment>
 
       </Router>
       
