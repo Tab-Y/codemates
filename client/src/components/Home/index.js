@@ -1,5 +1,7 @@
 import React from 'react';
 import Logo from '../images/logo.jpg';
+// import NewProblem from '../NewProblem';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
@@ -49,7 +51,7 @@ const Home = () => {
           <div className="col-8">
             <div style={{ display: "flex", justifyContent: "space-between" }}>
               <h1 style={{ color: "#c4fff9" }}>All Problems</h1>
-              <button>Create New Problem</button>
+              <Link to="/NewProblem"><button>Create New Problem</button></Link>
             </div>
 
             <div className="card homeCards" style={{ width: "38rem" }}>
