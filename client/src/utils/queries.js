@@ -16,10 +16,10 @@ export const QUERY_USER = gql`
 `;
 
 export const QUERY_QUESTIONS = gql`
-  query getThoughts {
-    thoughts {
+  query getQuestions {
+    questions {
       _id
-      thoughtContent
+      questionContent
       username
       createdAt
     }
@@ -30,7 +30,7 @@ export const QUERY_SINGLE_QUESTION = gql`
   query getSingleQuestion($questionId: ID!) {
     question(questionId: $questionId) {
       _id
-      questionContext
+      questionContet
       username
       createdAt
       answers {
