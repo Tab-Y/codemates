@@ -14,7 +14,6 @@ Our motivation for creating this project was to showcase our programming skills 
 - [Installation](#installation)
 - [Usage](#usage)
 - [Credits](#credits)
-- [Badges](#badges)
 - [Features](#features)
 - [Questions](#questions)
 - [Tests](#tests) 
@@ -25,30 +24,25 @@ Our motivation for creating this project was to showcase our programming skills 
 
 ## Usage 
 
-edits text 
+Please visit the deployed application at https://codemates-app.herokuapp.com/
 
-![Descriptive text](assets/images/screenshot.png) 
+This is a continual work in progress
+
+![Screenshot of landing page](./assets/img/p3-screenshot.png) 
 
 ## Credits / Contributors 
 
-[MariaYConstanza](https://github.com/MariaYConstanza)
-[jalmand2](https://github.com/jalmand2)
-[Zechariahmn](https://github.com/Zechariahmn)
-[Tab-Y](https://github.com/Tab-Y/)
+This is still a work in progress being created by : 
 
-## Badges 
+[MariaYConstanza](https://github.com/MariaYConstanza) 
 
-Add badges to this section 
+[jalmand2](https://github.com/jalmand2) 
 
-## Features 
+[Zechariahmn](https://github.com/Zechariahmn) 
 
-Add features to this space 
+[Tab-Y](https://github.com/Tab-Y/) 
+
 
 ## Questions 
 
-If you have any questions or concerns, please reach out to Tab-Y at n/.a. 
-
-## Tests 
-
-npm i 
-
+If you have any questions or concerns, please reach out to any of the contibutors.
