@@ -30,7 +30,7 @@ const NewProblem = () => {
 
         <div className="card-body text-success">
           <h5 className="card-title" style={styles.text}>Question:</h5>
-          <p className="card-text" style={styles.text}>The question description</p>
+          <p className="card-text" style={styles.text}><input style={{border: "none", backgroundColor: "#c4fff9", width:"25rem", height: "16rem"}} name="answerDescription" type="answerDescription" placeholder="The question description"></input></p>
         </div>
 
         <div className="card-footer bg-transparent border-success" style={styles.text}>Bank Point reward: Must be at least 5 pts</div>
