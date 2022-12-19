@@ -1,5 +1,7 @@
 import React from 'react';
 import Logo from '../images/logo.jpg';
+// import NewProblem from '../NewProblem';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
@@ -49,16 +51,16 @@ const Home = () => {
           <div className="col-8">
             <div style={{ display: "flex", justifyContent: "space-between" }}>
               <h1 style={{ color: "#c4fff9" }}>All Problems</h1>
-              <button>Create New Problem</button>
+              <Link to="/NewProblem"><button>Create New Problem</button></Link>
             </div>
 
             <div className="card homeCards" style={{ width: "38rem" }}>
 
               <ul className="list-group list-group-flush">
                 <li className="list-group-item" style={{ backgroundColor: "#c4fff9" }}>Why can't I change the text color of an a tag?</li>
-                <li className="list-group-item" style={{ backgroundColor: "#c4fff9" }}>Oldest</li>
-                <li className="list-group-item" style={{ backgroundColor: "#c4fff9" }}>Unanswered</li>
-                <li className="list-group-item" style={{ backgroundColor: "#c4fff9" }}>Paid</li>
+                <li className="list-group-item" style={{ backgroundColor: "#c4fff9" }}>Why won't my bootstrap CSS load onto the page?</li>
+                <li className="list-group-item" style={{ backgroundColor: "#c4fff9" }}>I keep getting a 404 error when I try to login.</li>
+                <li className="list-group-item" style={{ backgroundColor: "#c4fff9" }}>Help.</li>
               </ul>
 
             </div>
