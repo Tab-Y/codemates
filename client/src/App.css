@@ -242,12 +242,15 @@ main {
   background-color: #3dccc7;
   color: var(--roy-back);
 }
-
-.card-header {
+/* changed this so it wouldn't conflict with homepage card headers */
+/* .card-header {
+  color: var(--lit-high);
+  text-align: center;
+} */
+.codebank-header {
   color: var(--lit-high);
   text-align: center;
 }
-
 .post {
   font-family: var(--comf);
   margin-left: 15cm;

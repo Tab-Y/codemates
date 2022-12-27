@@ -22,13 +22,13 @@ const Home = () => {
       <div className="container">
 
         <div className="row">
-
+        <aside>
           <div className="col-4" style={{ width: "18rem", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
 
             <input type="search" className="form-control searchInput" style={{ width: "16rem", marginTop: "1rem", marginBottom: "1rem", backgroundColor: "#c4fff9" }}
               placeholder="Search">
             </input>
-
+            
             <div className="card" style={{ width: "16rem" }}>
 
               <div className="card-header text-center" style={{ backgroundColor: "#c4fff9" }}>
@@ -43,11 +43,11 @@ const Home = () => {
               </ul>
 
             </div>
-
+           
             <button style={{ width: "10rem", marginTop: "1rem" }}>Apply filters</button>
 
           </div>
-
+          </aside>
           <div className="col-8">
             <div style={{ display: "flex", justifyContent: "space-between" }}>
               <h1 style={{ color: "#c4fff9" }}>All Problems</h1>
