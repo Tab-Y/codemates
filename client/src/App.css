@@ -242,12 +242,15 @@ main {
   background-color: #3dccc7;
   color: var(--roy-back);
 }
-
-.card-header {
+/* changed this so it wouldn't conflict with homepage card headers */
+/* .card-header {
+  color: var(--lit-high);
+  text-align: center;
+} */
+.codebank-header {
   color: var(--lit-high);
   text-align: center;
 }
-
 .post {
   font-family: var(--comf);
   margin-left: 15cm;
@@ -328,18 +331,29 @@ main {
 /* -----------------End of Create Answer Page------------------ */
 
 /* ------------------New Problem Page----------------------- */
+.newProblemHeader {
+    color: rgb(196, 255, 249);
+    margin-top: 5cm;
+    font-size: 2rem;
+}
 .create-card {
   font-family: var(--comf);
-  width: 30rem;
+  width: 25rem;
   height: 25rem;
-  margin-left: 20cm;
+  /* margin-left: 20cm; */
 }
 
 .crt-problem {
   font-family: var(--comf);
   background-color: #006494;
   border-color: #006494;
-  margin-left: 24.5cm;
+  /* margin-left: 24.5cm; */
+}
+
+.newProblem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* -------------------End of New Problem Page---------------- */
@@ -425,7 +439,7 @@ main {
   justify-content: center;
 }
 
-/*-------------Navabr----------------*/
+/* -------------Navbar---------------- */
 ul.ml-auto.navbar-nav{
 margin-top:0;
 padding:0;
@@ -440,11 +454,11 @@ padding:0;
 display:flex;
 }
 
-ul li{
+/* ul li{
 list-style:none;
 margin:0 20px;
 transition:0.5s;
-}
+} */
 
 ul li a{
 display: block;

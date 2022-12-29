@@ -26,7 +26,7 @@ const Profile = () => {
 
         <div className="card bank-point">
 
-          <div className="card-header">
+          <div className="codebank-header card-header">
             Code Bank
           </div>
 

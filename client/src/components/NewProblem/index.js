@@ -20,9 +20,9 @@ const NewProblem = () => {
 
   return (
 
-    <div>
+    <div className="newProblem">
 
-      <h2 style={styles.h2}>Create New Problem</h2>
+      <h2 className="newProblemHeader">Create New Problem</h2>
 
       <div className="card border-success mb-3 create-card" style={styles.body}>
 
@@ -30,10 +30,10 @@ const NewProblem = () => {
 
         <div className="card-body text-success">
           <h5 className="card-title" style={styles.text}>Question:</h5>
-          <p className="card-text" style={styles.text}><input style={{border: "none", backgroundColor: "#c4fff9", width:"25rem", height: "16rem"}} name="answerDescription" type="answerDescription" placeholder="The question description"></input></p>
+          <p className="card-text" style={styles.text}><input style={{border: "none", backgroundColor: "#c4fff9", width:"22rem", height: "16rem"}} name="answerDescription" type="answerDescription" placeholder="The question description"></input></p>
         </div>
 
-        <div className="card-footer bg-transparent border-success" style={styles.text}>Bank Point reward: Must be at least 5 pts</div>
+        <div className="card-footer bg-transparent border-success" style={styles.text}>Bank Point reward: <input style={{backgroundColor: "rgb(196, 255, 249)", border: "none"}} name="karmaPoints" type="karmaPoints" placeholder="Must be at least 5 pts"></input></div>
 
       </div>
 
